@@ -67,20 +67,72 @@ batched topologization. The topologizer uses a running vocabulary so it
 reuses topic / subtopic / concept levels across slabs instead of inventing
 new ones for similar content.
 
-## Quickstart
+## Run it locally
+
+Three paths depending on what you want.
+
+### Path A — CLI (fastest)
 
 ```bash
-cd reference/ts
+git clone https://github.com/Chorozion/LTMi-XT.git
+cd LTMi-XT
 npm install
 npm run build
+
+# Inspect the included example corpus — no API key needed.
+node apps/cli/dist/main.js inspect examples/corpus.ltmi
+
+# Or link the binary so you can call `ltmi` directly.
+cd apps/cli && npm link
+ltmi inspect examples/corpus.ltmi
+ltmi train-export examples/corpus.ltmi --out training.jsonl
 ```
+
+To crystallize new documents, set ONE of:
+
+```bash
+export Q3M_API_KEY=…       # Inception Mercury — preferred
+export GROK_API_KEY=…      # xAI Grok
+export OPENAI_API_KEY=…    # OpenAI or any OpenAI-compatible endpoint
+```
+
+Then:
+
+```bash
+ltmi crystallize examples/messy-input.md --out my.ltmi
+ltmi retrieve my.ltmi "what are the workflow failure modes?"
+```
+
+### Path B — Local server with web UI
+
+```bash
+ltmi serve --port 3030
+# → open http://localhost:3030
+```
+
+The server exposes `POST /api/ltmi-xt/crystallize` and
+`POST /api/ltmi-xt/retrieve` plus a static web UI from `apps/web/`. Same
+endpoints and same code as <https://sophiaxt.com/tools/ltmi-xt>.
+
+Read-only commands (`inspect`, `train-export`) work without a provider.
+The web UI shows a "no provider" badge if none is configured.
+
+### Path C — Docker
+
+```bash
+docker build -t ltmi-xt:0.1 .
+docker run -p 3030:3030 -e Q3M_API_KEY=$Q3M_API_KEY ltmi-xt:0.1
+# → open http://localhost:3030
+```
+
+Provider env vars (`Q3M_API_KEY`, `GROK_API_KEY`, `OPENAI_API_KEY`) are
+passed through with `-e`.
+
+### Path D — Library import
 
 ```ts
 import {
-  buildBundle,
-  createQ3MProvider,
-  serializeJsonl,
-  retrieve,
+  buildBundle, createQ3MProvider, serializeJsonl, retrieve,
 } from "@sophiaxt/ltmi-xt";
 import * as fs from "node:fs/promises";
 
@@ -100,15 +152,21 @@ const bundle = await buildBundle(
 );
 
 await fs.writeFile("corpus.ltmi", serializeJsonl(bundle));
-
-const result = await retrieve("What are the workflow failure modes?", {
-  loci: bundle.loci,
-  provider,
-  systemPrompt: topologizeSystem,
-});
 ```
 
-A `createGrokProvider({ apiKey })` factory is also available for xAI Grok 3.
+`createGrokProvider({apiKey})` and `createOpenAiProvider({apiKey})` are also
+exported.
+
+## Tests
+
+```bash
+npm test     # 10 deterministic smoke tests, no network, no LLM
+```
+
+Tests cover the format invariants — canonical JSON sort, hash-derived
+lattice coordinate stability, content-addressed locus / source / corpus
+ids, JSONL round-trip, breadcrumb tree construction, and fine-tune row
+shape.
 
 ## Repository layout
 
@@ -116,38 +174,37 @@ A `createGrokProvider({ apiKey })` factory is also available for xAI Grok 3.
 LTMi-XT/
 ├── README.md                       this file
 ├── LICENSE                         Apache 2.0
+├── NOTICE.md                       plain-English license summary
+├── Dockerfile                      one-command runnable image
+├── package.json                    npm workspaces root
 ├── docs/
 │   ├── paper.md                    13-section research paper
 │   └── file-format-spec.md         formal v0.1 .ltmi specification
 ├── examples/
 │   ├── messy-input.md              sample messy doc
 │   └── corpus.ltmi                 the resulting .ltmi bundle
-├── reference/
-│   ├── ts/                         TypeScript reference implementation
-│   │   ├── package.json
-│   │   ├── tsconfig.json
-│   │   ├── README.md
+├── apps/
+│   ├── cli/                        runnable CLI
 │   │   └── src/
-│   │       ├── index.ts            public API
-│   │       ├── types.ts            strict v0.1 types
-│   │       ├── crystallizer.ts     stage 1
-│   │       ├── topologizer.ts      stage 2
-│   │       ├── chronologizer.ts    stage 3 (pure)
-│   │       ├── indexer.ts          stage 4 (composes pipeline)
-│   │       ├── retriever.ts        stage 5 (lattice walk)
-│   │       ├── fine-tune.ts        stage 6 (locus → training row)
-│   │       ├── format/
-│   │       │   ├── ltmi.ts         .ltmi read/write + id derivation
-│   │       │   ├── lattice.ts      hash-derived coordinate
-│   │       │   └── canonical-json.ts
-│   │       └── providers/
-│   │           └── openai-compat.ts  Q3M + Grok 3 (OpenAI-compatible)
+│   │       ├── main.ts             dispatcher
+│   │       ├── commands/           crystallize, retrieve, inspect,
+│   │       │                       train-export, serve
+│   │       ├── provider.ts         Q3M / Grok / OpenAI from env
+│   │       └── prompts.ts          loads reference/prompts/
+│   └── web/                        vanilla static demo UI
+│       ├── index.html
+│       ├── style.css
+│       └── app.js
+├── reference/
+│   ├── ts/                         TypeScript reference library
+│   │   └── src/                    types, format, 6 pipeline stages,
+│   │                               OpenAI-compatible providers
 │   └── prompts/
 │       ├── crystallize-system.md
 │       ├── topologize-system.md
 │       └── instruction-template.md
 └── tests/
-    └── golden/                     deterministic golden corpora (planned)
+    └── smoke.test.mts              10 deterministic format tests
 ```
 
 ## File format — the `.ltmi` bundle

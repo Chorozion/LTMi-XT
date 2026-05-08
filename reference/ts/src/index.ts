@@ -64,5 +64,6 @@ export {
   OpenAiCompatProvider,
   createQ3MProvider,
   createGrokProvider,
+  createOpenAiProvider,
 } from "./providers/openai-compat.js";
 export type { OpenAiCompatConfig } from "./providers/openai-compat.js";

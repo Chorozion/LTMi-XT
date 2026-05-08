@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LTMi-XT · Local Demo</title>
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="mark">LTMi-XT</span>
+    <span class="dim">v0.1 · local</span>
+  </div>
+  <nav>
+    <a href="https://sophiaxt.com/research/ltmi-xt" target="_blank" rel="noreferrer">Paper</a>
+    <a href="https://github.com/Chorozion/LTMi-XT" target="_blank" rel="noreferrer">GitHub</a>
+    <span id="provider-badge" class="badge">checking…</span>
+  </nav>
+</header>
+
+<main>
+  <section class="grid two">
+    <div class="card">
+      <div class="card-head">
+        <span class="eyebrow">Input · messy prose</span>
+        <button class="link" id="loadSample">Load sample</button>
+      </div>
+      <textarea id="text" rows="14" placeholder="Paste documentation, manuals, support transcripts, repair logs, research notes…"></textarea>
+      <div class="row between">
+        <span class="dim mono small" id="sizeHint">0 chars</span>
+        <button class="primary" id="crystallizeBtn">Crystallize →</button>
+      </div>
+      <div id="crystallizeError" class="error hidden"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="eyebrow">Breadcrumb tree</span>
+        <span id="lociCount" class="badge"></span>
+      </div>
+      <div id="tree" class="tree empty">Crystallize input to see the tree.</div>
+      <div id="downloads" class="row hidden">
+        <button class="secondary" id="downloadLtmi">Download corpus.ltmi</button>
+        <button class="secondary" id="downloadTraining">Download training.jsonl</button>
+        <button class="ghost" id="copyLtmi">Copy .ltmi</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid two" id="resultSection" style="display:none">
+    <div class="card">
+      <div class="card-head">
+        <span class="eyebrow">Locus inspector</span>
+      </div>
+      <div id="inspector" class="inspector empty">Click a locus in the tree to inspect.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="eyebrow">Query · lattice walk</span>
+      </div>
+      <form id="retrieveForm" class="row gap">
+        <input id="query" type="text" placeholder="What are the cold-storage workflow failure modes?" />
+        <button type="submit" class="primary">Run</button>
+      </form>
+      <div id="retrieveError" class="error hidden"></div>
+      <div id="results"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>This demo runs against your local <code>ltmi serve</code> process. Same code as <a href="https://sophiaxt.com/tools/ltmi-xt" target="_blank" rel="noreferrer">sophiaxt.com/tools/ltmi-xt</a>. Apache 2.0.</p>
+  </footer>
+</main>
+
+<script src="./app.js" type="module"></script>
+</body>
+</html>

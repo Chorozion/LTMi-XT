@@ -1,0 +1,37 @@
+{
+  "name": "@sophiaxt/ltmi-xt-cli",
+  "version": "0.1.0",
+  "description": "Command-line interface for LTMi-XT — crystallize messy docs into a lattice index, retrieve, export training data, or run a local server.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "ltmi": "./dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/main.ts"
+  },
+  "dependencies": {
+    "@sophiaxt/ltmi-xt": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "tsx": "^4.19.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "author": "Thomas Garren <contactus@sophiaxt.com>",
+  "homepage": "https://sophiaxt.com/research/ltmi-xt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chorozion/LTMi-XT.git",
+    "directory": "apps/cli"
+  }
+}

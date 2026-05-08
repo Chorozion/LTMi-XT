@@ -107,3 +107,17 @@ export function createGrokProvider(opts: {
     model: opts.model ?? "grok-3",
   });
 }
+
+/** OpenAI provider factory (or any OpenAI-compatible endpoint such as Ollama). */
+export function createOpenAiProvider(opts: {
+  apiKey: string;
+  model?: string;
+  baseUrl?: string;
+}): OpenAiCompatProvider {
+  return new OpenAiCompatProvider({
+    name: "openai",
+    baseUrl: opts.baseUrl ?? "https://api.openai.com/v1/chat/completions",
+    apiKey: opts.apiKey,
+    model: opts.model ?? "gpt-4o-mini",
+  });
+}

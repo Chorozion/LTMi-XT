@@ -1,0 +1,9 @@
+node_modules
+**/node_modules
+**/dist
+.git
+.github
+*.log
+.env
+.env.*
+Sophia_XT_LTMI-XT_PR_Pre-Release_v2.pdf
