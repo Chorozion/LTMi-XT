@@ -1,0 +1,48 @@
+{
+  "name": "@sophiaxt/ltmi-xt",
+  "version": "0.1.0",
+  "description": "LTMi-XT reference implementation — Layered Topological Memory Indexing — Extended Technology",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test tests/"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "src",
+    "prompts",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "ltmi",
+    "ltmi-xt",
+    "memory-palace",
+    "atomic-facts",
+    "rag",
+    "fine-tune",
+    "knowledge-graph",
+    "retrieval",
+    "sophiaxt"
+  ],
+  "author": "Thomas Garren <contactus@sophiaxt.com> (https://sophiaxt.com)",
+  "homepage": "https://sophiaxt.com/research/ltmi-xt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chorozion/LTMi-XT.git"
+  },
+  "dependencies": {}
+}
