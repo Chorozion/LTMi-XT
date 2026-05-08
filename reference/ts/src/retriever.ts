@@ -41,8 +41,11 @@ async function deriveQueryBreadcrumb(
   if (!opts.provider || !opts.systemPrompt) return null;
   const req: ChatRequest = {
     system: opts.systemPrompt,
-    user: "Loci to assign:\n" + JSON.stringify([{ id: "q-0", statement: query, kind: "claim" }], null, 2),
-    jsonMode: true,
+    user:
+      "Reply with STRICT JSON ONLY. No prose, no markdown fences.\n\n" +
+      "Loci to assign:\n" +
+      JSON.stringify([{ id: "q-0", statement: query, kind: "claim" }], null, 2),
+    jsonMode: false,
     maxTokens: 256,
     temperature: 0.0,
   };
@@ -72,6 +75,23 @@ function extractJson(text: string): string {
   return text.slice(start, end + 1);
 }
 
+const STOPWORDS = new Set([
+  "the","a","an","is","are","was","were","be","been","being","of","to","in","on","at","by",
+  "for","with","as","and","or","but","not","this","that","these","those","it","its","what",
+  "which","who","whom","how","why","do","does","did","done","have","has","had","can","could",
+  "will","would","should","may","might","i","you","they","them","their","our","my","me",
+  "company","companies",
+]);
+
+function tokenizeForKeywordMatch(text: string): string[] {
+  const tokens = text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s\-]/g, " ")
+    .split(/\s+/)
+    .filter((t) => t.length >= 2 && !STOPWORDS.has(t));
+  return Array.from(new Set(tokens));
+}
+
 export async function retrieve(query: string, opts: RetrieverOptions): Promise<RetrievalResult> {
   const radius = opts.radius ?? 4;
   const k = opts.k ?? 8;
@@ -79,6 +99,11 @@ export async function retrieve(query: string, opts: RetrieverOptions): Promise<R
 
   const queryBreadcrumb = await deriveQueryBreadcrumb(query, opts);
   const queryCell = queryBreadcrumb ? latticeCoord(queryBreadcrumb) : null;
+
+  // When breadcrumb derivation fails (e.g. provider truncated), fall back to
+  // a keyword-overlap score so retrieval still returns query-relevant loci
+  // instead of just the highest-confidence ones.
+  const queryTokens = !queryBreadcrumb ? tokenizeForKeywordMatch(query) : null;
 
   const scored = opts.loci.map((locus) => {
     const dLat = queryCell
@@ -88,21 +113,43 @@ export async function retrieve(query: string, opts: RetrieverOptions): Promise<R
       ? breadcrumbPrefixMatch(locus.breadcrumb, queryBreadcrumb)
       : 0;
     const latNorm = queryCell ? Math.max(0, 1 - dLat / radius) : 0;
-    const score =
-      w.lattice * latNorm +
-      w.confidence * locus.confidence +
-      w.decay * locus.decay +
-      w.prefix * (dPref / 4);
+
+    let score: number;
+    if (queryBreadcrumb) {
+      // Lattice-walk path.
+      score =
+        w.lattice * latNorm +
+        w.confidence * locus.confidence +
+        w.decay * locus.decay +
+        w.prefix * (dPref / 4);
+    } else if (queryTokens) {
+      // Keyword-fallback path: weight overlap across statement + breadcrumb.
+      const haystack = (
+        locus.statement +
+        " " +
+        locus.breadcrumb.filter(Boolean).join(" ")
+      ).toLowerCase();
+      let hits = 0;
+      for (const t of queryTokens) {
+        if (haystack.includes(t)) hits++;
+      }
+      const overlap = queryTokens.length === 0 ? 0 : hits / queryTokens.length;
+      score = 0.7 * overlap + 0.2 * locus.confidence + 0.1 * locus.decay;
+    } else {
+      score = w.confidence * locus.confidence + w.decay * locus.decay;
+    }
     return { locus, score, latticeDistance: dLat, prefixDepth: dPref };
   });
 
-  // If no query breadcrumb, fall back to confidence × decay only.
+  // Only filter by lattice radius when we actually have a query cell.
   const filtered = queryCell
     ? scored.filter((s) => s.latticeDistance <= radius)
     : scored;
+  // Drop zero-score keyword-fallback results (no overlap whatsoever).
+  const nonZero = !queryBreadcrumb ? filtered.filter((s) => s.score > 0.05) : filtered;
 
-  filtered.sort((a, b) => b.score - a.score);
-  const top = filtered.slice(0, k);
+  nonZero.sort((a, b) => b.score - a.score);
+  const top = nonZero.slice(0, k);
 
   return {
     query,

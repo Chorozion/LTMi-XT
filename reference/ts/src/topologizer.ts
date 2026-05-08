@@ -6,7 +6,10 @@ import type { Breadcrumb, ChatRequest, Provider } from "./types.js";
 import { latticeCoord } from "./format/lattice.js";
 import type { CrystallizedLocus } from "./crystallizer.js";
 
-const BATCH_SIZE_DEFAULT = 30;
+// Mercury 2 is a reasoning model — large batches (30 loci) blow the token
+// budget. 8 loci per batch comfortably fits within reasoning + completion
+// for the typical statement length.
+const BATCH_SIZE_DEFAULT = 8;
 
 export interface TopologizerOptions {
   provider: Provider;
@@ -28,14 +31,14 @@ interface RawAssignment {
   breadcrumb?: unknown;
 }
 
-function tryParseJson(text: string): unknown {
+function tryParseJson(text: string): unknown | null {
   try { return JSON.parse(text); } catch {}
   const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/i);
   if (fenced?.[1]) {
     try { return JSON.parse(fenced[1]); } catch {}
   }
   const start = text.indexOf("{");
-  if (start === -1) throw new Error("No JSON in topologizer output.");
+  if (start === -1) return null;
   let depth = 0;
   let inString = false;
   let escaped = false;
@@ -48,10 +51,46 @@ function tryParseJson(text: string): unknown {
     if (c === "{") depth++;
     if (c === "}") {
       depth--;
-      if (depth === 0) return JSON.parse(text.slice(start, i + 1));
+      if (depth === 0) {
+        try { return JSON.parse(text.slice(start, i + 1)); } catch { return null; }
+      }
     }
   }
-  throw new Error("Unbalanced JSON in topologizer output.");
+  // Truncated output. Try to recover a partial assignments array.
+  const am = text.match(/"assignments"\s*:\s*\[([\s\S]*)/);
+  if (!am) return null;
+  // Walk array items, balanced-brace, until we hit incomplete one.
+  const items: unknown[] = [];
+  let body = am[1];
+  let i = 0;
+  while (i < body.length) {
+    while (i < body.length && /[\s,]/.test(body[i])) i++;
+    if (body[i] !== "{") break;
+    const itemStart = i;
+    let d = 0;
+    let iss = false;
+    let esc = false;
+    let j = i;
+    for (; j < body.length; j++) {
+      const cc = body[j];
+      if (esc) { esc = false; continue; }
+      if (cc === "\\") { esc = true; continue; }
+      if (cc === '"') { iss = !iss; continue; }
+      if (iss) continue;
+      if (cc === "{") d++;
+      if (cc === "}") {
+        d--;
+        if (d === 0) {
+          try { items.push(JSON.parse(body.slice(itemStart, j + 1))); } catch {}
+          j++;
+          break;
+        }
+      }
+    }
+    if (d !== 0) break; // truncated mid-item
+    i = j;
+  }
+  return items.length > 0 ? { assignments: items } : null;
 }
 
 function coerceBreadcrumb(raw: unknown): Breadcrumb | null {
@@ -101,14 +140,33 @@ export async function topologize(
 
     const req: ChatRequest = {
       system: opts.systemPrompt,
-      user: vocabHint + "Loci to assign:\n" + JSON.stringify(userPayload, null, 2),
-      jsonMode: true,
+      user: JSON.stringify(
+        {
+          instruction:
+            "Assign a four-level breadcrumb path to each statement in the list. The four levels are topic, subtopic, concept, claim. Reuse existing topic, subtopic, and concept names from knownVocabulary when relevant. Return only valid JSON matching the requiredJsonSchema.",
+          requiredJsonSchema: {
+            assignments: [
+              { id: "string", breadcrumb: "array of exactly four strings (topic, subtopic, concept, claim) where the topic must be a string and trailing levels may be null" },
+            ],
+          },
+          knownVocabulary: opts.knownVocabulary ?? null,
+          statements: userPayload,
+        },
+        null,
+        2,
+      ),
+      jsonMode: false,
       maxTokens: 2048,
       temperature: 0.0,
     };
-    const res = await opts.provider.chat(req);
-    const parsed = tryParseJson(res.text) as { assignments?: RawAssignment[] };
-    const assignments = Array.isArray(parsed?.assignments) ? parsed.assignments : [];
+    let parsed: { assignments?: RawAssignment[] } | null = null;
+    try {
+      const res = await opts.provider.chat(req);
+      parsed = tryParseJson(res.text) as { assignments?: RawAssignment[] } | null;
+    } catch {
+      parsed = null;
+    }
+    const assignments = parsed && Array.isArray(parsed.assignments) ? parsed.assignments : [];
     const map = new Map<string, Breadcrumb>();
     for (const a of assignments) {
       if (typeof a.id !== "string") continue;

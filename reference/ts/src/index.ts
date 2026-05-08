@@ -67,3 +67,13 @@ export {
   createOpenAiProvider,
 } from "./providers/openai-compat.js";
 export type { OpenAiCompatConfig } from "./providers/openai-compat.js";
+
+export {
+  PuterProvider,
+  createPuterProvider,
+  PUTER_RECOMMENDED_MODELS,
+} from "./providers/puter.js";
+export type { PuterProviderConfig } from "./providers/puter.js";
+
+// Persona
+export { SOPHIA_PERSONA, applyPersona } from "./persona.js";

@@ -2,18 +2,28 @@
 
 **Layered Topological Memory Indexing — Extended Technology.**
 A document-crystallization and lattice-indexed retrieval architecture for messy
-documentation, optimized for hallucination-bounded retrieval **and** structured
-fine-tune ingestion.
+documentation, optimized for hallucination-bounded retrieval, structured
+fine-tune ingestion, **and effective context-window extension** for any LLM.
 
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Status: v0.1](https://img.shields.io/badge/status-v0.1-9BFFE8.svg)](docs/paper.md)
 [![Format: .ltmi](https://img.shields.io/badge/format-.ltmi%20JSONL-FFD93D.svg)](docs/file-format-spec.md)
 [![Lattice: 64³](https://img.shields.io/badge/lattice-64%C2%B3-00D4FF.svg)](docs/paper.md#5--lattice-topology-and-breadcrumb-derived-coordinates)
-[![Demo: live](https://img.shields.io/badge/demo-live-3DDC97.svg)](https://sophiaxt.com/tools/ltmi-xt)
+[![Demo: LIVE](https://img.shields.io/badge/demo-LIVE%20%E2%86%97-3DDC97.svg)](https://sophiaxt.com/tools/ltmi-xt)
+[![Free via Puter](https://img.shields.io/badge/free%20via%20Puter-GPT--4o%20%2B%20Claude%20%2B%20more-FFD93D.svg)](https://docs.puter.com/AI/chat/)
 
-> Live demo: **<https://sophiaxt.com/tools/ltmi-xt>**
-> Research page: **<https://sophiaxt.com/research/ltmi-xt>**
-> Paper: [`docs/paper.md`](docs/paper.md) · Format spec: [`docs/file-format-spec.md`](docs/file-format-spec.md)
+## 🎯 Try the live demo right now
+
+> **<https://sophiaxt.com/tools/ltmi-xt>**
+
+Paste messy text, watch it crystallize into a lattice index, query it. The
+demo ships with a model picker (GPT-4o · Claude Sonnet 4.5 · DeepSeek R1 ·
+OpenAI o4-mini) running through **Puter.js** so end users pay for their own
+inference and the operator pays nothing. The same demo also works against
+your own provider keys (Q3M / Mercury 2 / Grok / OpenAI) if you self-host.
+
+Research page: **<https://sophiaxt.com/research/ltmi-xt>**
+Paper: [`docs/paper.md`](docs/paper.md) · Format spec: [`docs/file-format-spec.md`](docs/file-format-spec.md)
 
 ## What it does
 
@@ -33,9 +43,89 @@ The resulting `.ltmi` artifact is **dual-purpose**: it supports breadcrumb-
 anchored retrieval (LLM answers grounded to specific loci with full provenance)
 *and* direct ingestion as fine-tune training rows.
 
-## Why a lattice
+## 🧠 Use LTMi-XT to extend any LLM's effective context
 
-Classical mnemonic technique places information at distinct **loci** in a
+Most LLMs have a hard context window. Even when the window is large, paying
+for and reasoning over a 100,000-token corpus on every chat turn is wasteful
+and slow. LTMi-XT lets you do this once, then keep the corpus warm forever:
+
+```
+ONE-TIME · ingest                    PER-QUERY · retrieve only what you need
+─────────────────                    ─────────────────────────────────────────
+big_doc.md  ─┐                                          ┌→ top-K loci as context
+   …         ├─→  crystallize  ─→  corpus.ltmi          │   (e.g. 6 loci ≈ 800 tokens)
+all your     │      (1 LLM      (durable, cheap          │
+ PDFs        │       call per     to store)              │
+ logs        │       2KB slab)                           │
+ wiki        │                                          ▲
+─────────────┘                                          │
+                                                        │
+                user query "what was the claim       ┌──┴───────────┐
+                amount on coolant losses?"   ───────►│ retrieve     │
+                                                     │ (lattice walk│
+                                                     │  + breadcrumb│
+                                                     │  prefix)     │
+                                                     └──────────────┘
+```
+
+**Concretely:**
+
+1. **Crystallize once.** Run a long document through `crystallize` — get a
+   stable `.ltmi` bundle. You can store this in a file, S3, a database row,
+   anywhere. It's plain JSONL.
+
+2. **For each user query, retrieve only top-K loci.** The lattice walk
+   surfaces 4–8 loci (typically 500–1,200 tokens) that are breadcrumb-anchored
+   to the query. Feed those + the question to your LLM.
+
+3. **Net effect.** The LLM sees a **focused, breadcrumb-tagged subset** of
+   your corpus instead of the whole thing. Token cost per query drops by
+   100–1000× vs. dumping the full document into the prompt. The breadcrumb
+   path is part of the prompt so the LLM grounds its answer to a specific
+   place in the source.
+
+4. **Provenance comes for free.** Every locus has a `source.id` and byte
+   offset, so the LLM's answer can be traced back to the exact span in the
+   original document. Useful for audit, citation, and "show your work."
+
+5. **Same artifact = fine-tune data.** Run `train-export` against the same
+   `.ltmi` and you get JSONL training rows with breadcrumb-derived
+   instructions, ready for SFT/LoRA.
+
+### Minimal code (Node)
+
+```ts
+import {
+  buildBundle, retrieve, serializeJsonl, createPuterProvider,
+} from "@sophiaxt/ltmi-xt";
+
+// 1. CRYSTALLIZE — runs once per document
+const bundle = await buildBundle(
+  [{ label: "wiki.md", text: hugeDocument }],
+  {
+    crystallizer: { provider: chatProvider, systemPrompt: cryPrompt },
+    topologizer:  { provider: chatProvider, systemPrompt: topPrompt },
+    persona: "sophia", // every model self-identifies as Sophia
+  }
+);
+fs.writeFileSync("wiki.ltmi", serializeJsonl(bundle));
+
+// 2. PER QUERY — retrieve top-K loci, hand to your LLM
+const result = await retrieve("What were the workflow failure modes?", {
+  loci: bundle.loci,
+  provider: chatProvider,
+  systemPrompt: topPrompt,
+  k: 6,
+});
+
+const context = result.results
+  .map(r => `[${r.locus.breadcrumb.filter(Boolean).join(" > ")}] ${r.locus.statement}`)
+  .join("\n");
+
+// Feed `context` + the user's question to whatever LLM you want.
+```
+
+#Classical mnemonic technique places information at distinct **loci** in a
 spatial structure ("method of loci" / memory palace). Retrieval is a walk
 through the structure rather than a search by identity. LTMi-XT applies this
 literally: every crystallized statement is a locus, the lattice is a discrete
@@ -66,6 +156,60 @@ Two LLM round-trips per ~2KB slab — one for crystallization, one for
 batched topologization. The topologizer uses a running vocabulary so it
 reuses topic / subtopic / concept levels across slabs instead of inventing
 new ones for similar content.
+
+## ⚡ Free, scalable hosting via Puter — zero per-query operator cost
+
+LTMi-XT v0.1 ships a `PuterProvider` that calls `puter.ai.chat()` directly
+from the user's browser. Puter uses a **user-pays cost model** — your end
+users pay for their own inference through their own Puter accounts; the
+operator pays nothing per query. This makes it practical to host a public
+demo at any scale.
+
+```html
+<!-- Drop this on your page; that's the whole setup. -->
+<script src="https://js.puter.com/v2/"></script>
+```
+
+```ts
+import { buildBundle, createPuterProvider } from "@sophiaxt/ltmi-xt";
+
+const provider = createPuterProvider({ model: "gpt-4o-mini" });
+
+const bundle = await buildBundle(
+  [{ label: "doc.md", text: messy }],
+  {
+    crystallizer: { provider, systemPrompt: cryPrompt },
+    topologizer:  { provider, systemPrompt: topPrompt },
+    persona: "sophia",
+  }
+);
+```
+
+Recommended models (all available via Puter):
+
+| Model | Notes |
+|---|---|
+| `gpt-4o-mini` | Default · fast · reliable JSON |
+| `gpt-4o` | Higher quality · slower |
+| `claude-sonnet-4-5` | Strong reasoning · readable breadcrumbs |
+| `deepseek/deepseek-r1` | Reasoning model · cost-efficient |
+| `o4-mini` | OpenAI reasoning model |
+
+The live demo at <https://sophiaxt.com/tools/ltmi-xt> exposes this list as
+a model picker. Whichever model is selected is wrapped automatically by the
+Sophia persona prefix (see next section).
+
+## 🪞 Sophia persona — every model self-identifies as Sophia
+
+By default LTMi-XT wraps the system prompt with a short **Sophia persona**
+preamble so the underlying model self-identifies as `Sophia from SOPHIA XT`
+when asked, and operates with elevated reasoning posture (higher
+signal-to-noise, structured detail, no fabrication). This default applies
+to every provider — Puter, Q3M (Mercury 2), Grok, OpenAI.
+
+To disable, pass `persona: "none"` in the index options. The persona is
+implemented as a 9-line string constant exported from
+`reference/ts/src/persona.ts` so it's auditable and trivially overridable.
 
 ## Run it locally
 

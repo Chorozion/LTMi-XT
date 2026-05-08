@@ -14,6 +14,7 @@ import {
 import { crystallize, type CrystallizerOptions } from "./crystallizer.js";
 import { topologize, type TopologizerOptions } from "./topologizer.js";
 import { chronologize, type ChronoOptions } from "./chronologizer.js";
+import { applyPersona } from "./persona.js";
 
 export interface IngestSource {
   /** Source label, e.g. filename or URL. Optional, just informational. */
@@ -37,6 +38,11 @@ export interface IndexOptions {
   /** Notes / tags for the manifest. */
   notes?: string;
   tags?: string[];
+  /**
+   * Optional persona prefix wrapping the system prompts so the underlying
+   * model self-identifies as Sophia (SOPHIA XT). Default: "sophia".
+   */
+  persona?: "sophia" | "none";
 }
 
 /** Build a full Bundle from a list of input sources. */
@@ -48,16 +54,25 @@ export async function buildBundle(
   const allLoci: Locus[] = [];
   const knownVocab = { topics: new Set<string>(), subtopics: new Set<string>(), concepts: new Set<string>() };
 
+  // Apply Sophia persona prefix to system prompts unless explicitly disabled.
+  const persona = opts.persona ?? "sophia";
+  const crystallizerOpts: CrystallizerOptions = {
+    ...opts.crystallizer,
+    systemPrompt: applyPersona(persona, opts.crystallizer.systemPrompt),
+  };
+  const topologizerSystemPrompt = applyPersona(persona, opts.topologizer.systemPrompt);
+
   for (const input of inputs) {
     const sourceId = deriveSourceId(input.text);
     sources.set(sourceId, input.text);
 
     // Stage 1
-    const crystallized = await crystallize(input.text, opts.crystallizer);
+    const crystallized = await crystallize(input.text, crystallizerOpts);
 
     // Stage 2 — pass running vocab so the model reuses levels
     const topologized = await topologize(crystallized, {
       ...opts.topologizer,
+      systemPrompt: topologizerSystemPrompt,
       knownVocabulary: {
         topics: Array.from(knownVocab.topics),
         subtopics: Array.from(knownVocab.subtopics),
