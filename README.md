@@ -186,14 +186,20 @@ See the paper §11 and §12 for the full limitations + roadmap.
 
 ## License
 
-Apache License 2.0. See [`LICENSE`](LICENSE).
+Apache License 2.0 — formal terms in [`LICENSE`](LICENSE), plain-English
+summary in [`NOTICE.md`](NOTICE.md).
 
-The `.ltmi` file format is open; users may produce, store, and exchange
-`.ltmi` artifacts without notifying or paying SOPHIA XT.
+Short version:
 
-The acronym **LTMi-XT** and the file extension `.ltmi` are SOPHIA XT
-trademarks; informal use is unrestricted, but commercial product names
-should not collide.
+- The **code** is Apache 2.0 — use, modify, redistribute, and ship inside
+  closed-source products freely.
+- The **`.ltmi` file format** is open — produce, store, exchange, sell,
+  and fine-tune on `.ltmi` bundles without notification or fee.
+- The **project name "LTMi-XT"** and the **file extension `.ltmi`** are
+  SOPHIA XT marks. Informal references ("uses LTMi-XT", "`.ltmi`
+  compatible") are fine; please don't ship a competing product *named*
+  LTMi-XT without permission. See [`NOTICE.md`](NOTICE.md) for the
+  trademark scope and four common use cases.
 
 ---
 
