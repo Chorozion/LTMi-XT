@@ -11,6 +11,7 @@ fine-tune ingestion, **and effective context-window extension** for any LLM.
 [![Lattice: 64³](https://img.shields.io/badge/lattice-64%C2%B3-00D4FF.svg)](docs/paper.md#5--lattice-topology-and-breadcrumb-derived-coordinates)
 [![Demo: LIVE](https://img.shields.io/badge/demo-LIVE%20%E2%86%97-3DDC97.svg)](https://sophiaxt.com/tools/ltmi-xt)
 [![Free via Puter](https://img.shields.io/badge/free%20via%20Puter-GPT--4o%20%2B%20Claude%20%2B%20more-FFD93D.svg)](https://docs.puter.com/AI/chat/)
+[![Benchmarks: 13/15 top-1](https://img.shields.io/badge/benchmarks-13%2F15%20top--1%20%C2%B7%204%2C370ms%20median-9BFFE8.svg)](docs/benchmarks-v0.1.md)
 
 ## 🎯 Try the live demo right now
 
@@ -300,6 +301,36 @@ await fs.writeFile("corpus.ltmi", serializeJsonl(bundle));
 
 `createGrokProvider({apiKey})` and `createOpenAiProvider({apiKey})` are also
 exported.
+
+## Benchmarks
+
+Real measurements against the live `https://sophiaxt.com/api/ltmi-xt/*`
+endpoint on **2026-05-08**, Mercury 2 backend. Numbers describe **this
+deployment at this time** — they are not generalizable.
+
+| Metric | Value |
+|---|---:|
+| Top-1 hit rate (15 hand-authored queries, 3 corpora) | **13 / 15 = 86.7 %** *(grader-corrected)* |
+| `/crystallize` median latency (700–1,100 char input) | **4,370 ms** |
+| `/retrieve` median latency (single query, k=6) | **1,228 ms** |
+| Lattice coordinate stability (10,000 trials) | 100.0 % |
+| Locus id stability (10,000 trials) | 100.0 % |
+| Canonical JSON stability (10,000 trials) | 100.0 % |
+| Format JSONL round-trip (23 loci) | byte-identical |
+
+Full methodology, raw numbers, per-query results, and the two real misses
+documented honestly: see [`docs/benchmarks-v0.1.md`](docs/benchmarks-v0.1.md).
+
+To reproduce locally:
+
+```bash
+npm install && npm run build
+node examples/benchmarks/micro_bench.mjs       # deterministic, no network
+python3 examples/benchmarks/run_bench.py       # live API, ~5 min, respects rate limits
+```
+
+Raw artifacts (logs, captured `.ltmi` bundles, queries) are committed
+under [`examples/benchmarks/`](examples/benchmarks).
 
 ## Tests
 

@@ -1,0 +1,23 @@
+{
+  "C1": [
+    { "q": "What is the failure mode in the standard cold storage workflow?", "expect_keywords": ["coolant", "mismatch", "shipments"] },
+    { "q": "What insulation should be used for dry ice loads?", "expect_keywords": ["VIP", "panel", "inserts"] },
+    { "q": "What is the safe transit time for gel pack loads?", "expect_keywords": ["18", "hours", "gel"] },
+    { "q": "How many trucks does the cold storage line operate?", "expect_keywords": ["three", "trucks", "metro"] },
+    { "q": "What tool can model lane viability in advance?", "expect_keywords": ["Sophia Key 3M", "lane", "configuration"] }
+  ],
+  "C2": [
+    { "q": "What is the hidden size of Cassandra T1?", "expect_keywords": ["2048", "hidden", "size"] },
+    { "q": "What was the training loss at epoch 5?", "expect_keywords": ["2.2561", "epoch", "loss"] },
+    { "q": "How many query and KV heads does the model use?", "expect_keywords": ["16", "query", "4", "KV", "heads"] },
+    { "q": "What position encoding does the model use?", "expect_keywords": ["RoPE", "position"] },
+    { "q": "What license is the Cassandra T1 repo released under?", "expect_keywords": ["Apache", "2.0", "license"] }
+  ],
+  "C3": [
+    { "q": "What are the two DiagBuddy pricing tiers?", "expect_keywords": ["$20", "$34.99", "tier"] },
+    { "q": "When is the HR review cycle starting?", "expect_keywords": ["October", "14", "HR"] },
+    { "q": "How many DiagBuddy users are active?", "expect_keywords": ["251", "active", "users"] },
+    { "q": "What is the engineering lead's deadline?", "expect_keywords": ["October", "25", "benchmark", "engineering"] },
+    { "q": "How long is finance's runway estimate?", "expect_keywords": ["14", "months", "runway"] }
+  ]
+}

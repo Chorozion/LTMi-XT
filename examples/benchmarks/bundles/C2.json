@@ -1,0 +1,1002 @@
+{
+  "success": true,
+  "manifest": {
+    "v": "ltmi/0.1",
+    "kind": "manifest",
+    "corpus_id": "c-1bb0e0064917e34ae8d1fed8ee1a5bd1",
+    "loci": 23,
+    "lattice": {
+      "dim": 64,
+      "shape": "cube"
+    },
+    "created": "2026-05-08T23:25:58.156Z",
+    "sources": [
+      "s-89e5e5722169a83e2fbe81b82803fc81"
+    ],
+    "producer": "sophiaxt-server/ltmi-xt-0.1",
+    "crystallizer_model": "q3m:mercury-2",
+    "topologizer_model": "q3m:mercury-2"
+  },
+  "loci": [
+    {
+      "id": "a-38472c6c0805a98d681d13d5dc17eeff",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Architecture",
+        "Layer Configuration",
+        "28 layers, hidden size 2048"
+      ],
+      "lattice": [
+        16,
+        35,
+        20
+      ],
+      "statement": "The Cassandra T1 model is a 28-layer transformer with a hidden size of 2048.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          76
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-231c93047194235458d0c6e059c6ebf3",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Architecture",
+        "Grouped-Query Attention",
+        "16 query heads, 4 key-value heads"
+      ],
+      "lattice": [
+        16,
+        35,
+        15
+      ],
+      "statement": "The Cassandra T1 model uses grouped-query attention with 16 query heads and 4 key-value heads.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          94
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-01fa48aeea66d1c68adcbad822bac6d8",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Positional Encoding",
+        "RoPE",
+        "uses RoPE"
+      ],
+      "lattice": [
+        16,
+        49,
+        49
+      ],
+      "statement": "The Cassandra T1 model uses RoPE for position encoding.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          55
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-0108031cd6337cdc66902243b7d234d4",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Normalization",
+        "RMSNorm",
+        "uses RMSNorm"
+      ],
+      "lattice": [
+        16,
+        21,
+        24
+      ],
+      "statement": "The Cassandra T1 model uses RMSNorm for normalization.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          54
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-6dfa445177c2a884f74c8c5aa490f801",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Feed-forward Network",
+        "SwiGLU",
+        "intermediate size 5632"
+      ],
+      "lattice": [
+        16,
+        29,
+        23
+      ],
+      "statement": "The feed-forward network of the Cassandra T1 model uses SwiGLU with intermediate size 5632.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          91
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-966563a96358e7b1983d2a4026e4ea8a",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Vocabulary",
+        "Token Count",
+        "32768 tokens"
+      ],
+      "lattice": [
+        16,
+        22,
+        22
+      ],
+      "statement": "The Cassandra T1 model vocabulary contains 32768 tokens.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          56
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-e61a6f94eed9073b1bfcacfe47dbd1c2",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Vocabulary",
+        "Mask Token ID",
+        "32766"
+      ],
+      "lattice": [
+        16,
+        22,
+        23
+      ],
+      "statement": "The mask token id of the Cassandra T1 model is 32766.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          53
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-a8a9a1c5abb5f69e2556c7beb5a809c1",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Vocabulary",
+        "Pad Token ID",
+        "32767"
+      ],
+      "lattice": [
+        16,
+        22,
+        27
+      ],
+      "statement": "The pad token id of the Cassandra T1 model is 32767.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          52
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-e73eba4c4c9f0a123065eb559ad01e8e",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Inference",
+        "Denoising Steps",
+        "Default inference uses 12 denoising steps"
+      ],
+      "lattice": [
+        16,
+        59,
+        3
+      ],
+      "statement": "Default inference for the Cassandra T1 model uses 12 denoising steps.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          69
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-300fcac39a36b95746f917da51ea63cf",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Training",
+        "Training Loss",
+        "Final loss 2.2561 at epoch 5"
+      ],
+      "lattice": [
+        16,
+        61,
+        38
+      ],
+      "statement": "Training of the Cassandra T1 model reached a final loss of 2.2561 at epoch 5.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          77
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-07e327d47e29d27a672bc2fd7c87111a",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Training",
+        "Training Loss",
+        "Epoch 1 training loss 3.78"
+      ],
+      "lattice": [
+        16,
+        61,
+        38
+      ],
+      "statement": "At epoch 1, training loss of the Cassandra T1 model was 3.78.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          61
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-b4fb2dab460392e904197102d97b08a5",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Training",
+        "Training Loss",
+        "Epoch 2 training loss 2.89"
+      ],
+      "lattice": [
+        16,
+        61,
+        38
+      ],
+      "statement": "At epoch 2, training loss of the Cassandra T1 model was 2.89.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          61
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-61d961394ceee22f7ea45375d9297f3a",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Training",
+        "Training Loss",
+        "Epoch 3 training loss 2.67"
+      ],
+      "lattice": [
+        16,
+        61,
+        38
+      ],
+      "statement": "At epoch 3, training loss of the Cassandra T1 model was 2.67.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          61
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-03669821bb05e111a71c874c980ed0e3",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Training",
+        "Training Loss",
+        "Epoch 4 training loss 2.42"
+      ],
+      "lattice": [
+        16,
+        61,
+        38
+      ],
+      "statement": "At epoch 4, training loss of the Cassandra T1 model was 2.42.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          61
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-9de98293a5040be41334084481e041c9",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Checkpoint",
+        "Checkpoint Size",
+        "Epoch-5 FP16 checkpoint size 2659500664 bytes"
+      ],
+      "lattice": [
+        16,
+        8,
+        48
+      ],
+      "statement": "The released epoch-5 FP16 checkpoint for the Cassandra T1 model is 2659500664 bytes.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          84
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-47edb7305fd1c003589a7b0f5ac04359",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Checkpoint",
+        "Checkpoint Size",
+        "V2 scratch checkpoint at step 82002 size 16665974950 bytes"
+      ],
+      "lattice": [
+        16,
+        8,
+        48
+      ],
+      "statement": "The released v2 scratch checkpoint for the Cassandra T1 model at step 82002 is 16665974950 bytes.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          97
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-6cfbb78cffd88911b9632a8195425ced",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Repository Management",
+        "Git LFS Splitting",
+        "GitHub rejects single LFS objects above 2\u202fGB"
+      ],
+      "lattice": [
+        16,
+        63,
+        31
+      ],
+      "statement": "Both checkpoints are split into Git LFS parts because GitHub rejects single LFS objects above 2 GB.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          99
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-3fbd9f0b13bca4ccd4b7d0bc67fc521e",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Tokenizer",
+        "File Size",
+        "Tokenizer file is 2,253,607 bytes"
+      ],
+      "lattice": [
+        16,
+        9,
+        62
+      ],
+      "statement": "The tokenizer file for the Cassandra T1 model is 2253607 bytes.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          63
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-13fc39ead80638e386a8d69b43513b68",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Artifacts",
+        "Content Addressing",
+        "Artifacts use BLAKE2b"
+      ],
+      "lattice": [
+        16,
+        51,
+        20
+      ],
+      "statement": "All artifacts of the Cassandra T1 model are content-addressed using BLAKE2b.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          76
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-dba7e2a64c6c103428e8a4babedffa37",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Inference Scripts",
+        "CUDA Inference",
+        "run_cassandra.py used for local CUDA"
+      ],
+      "lattice": [
+        16,
+        32,
+        57
+      ],
+      "statement": "The inference script run_cassandra.py is used for local CUDA.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          61
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-5ab996161f69ffc5872c7c05c49e608d",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Inference Scripts",
+        "Chunked Generation",
+        "chunk_gen.py used for chunked generation"
+      ],
+      "lattice": [
+        16,
+        32,
+        30
+      ],
+      "statement": "The inference script chunk_gen.py is used for chunked generation.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          65
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-cb24521ee08e8cf583f9c91347361bd1",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "Inference Scripts",
+        "Flask Chat Completion",
+        "serve_ep5.py provides Flask chat-completion endpoint"
+      ],
+      "lattice": [
+        16,
+        32,
+        11
+      ],
+      "statement": "The inference script serve_ep5.py provides a Flask chat-completion endpoint.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          76
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    },
+    {
+      "id": "a-690d08e7fa077d110c730442b795875b",
+      "breadcrumb": [
+        "Cassandra T1 Model",
+        "License",
+        "Apache 2.0",
+        "Repository licensed Apache 2.0"
+      ],
+      "lattice": [
+        16,
+        41,
+        18
+      ],
+      "statement": "The repository for the Cassandra T1 model is licensed Apache 2.0.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+        "offset": [
+          0,
+          65
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:58.155Z",
+      "last_referenced": "2026-05-08T23:25:58.155Z",
+      "references": 0
+    }
+  ],
+  "breadcrumbTree": {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "Cassandra T1 Model",
+        "children": [
+          {
+            "name": "Architecture",
+            "children": [
+              {
+                "name": "Layer Configuration",
+                "children": [
+                  {
+                    "name": "28 layers, hidden size 2048",
+                    "loci": [
+                      "a-38472c6c0805a98d681d13d5dc17eeff"
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Grouped-Query Attention",
+                "children": [
+                  {
+                    "name": "16 query heads, 4 key-value heads",
+                    "loci": [
+                      "a-231c93047194235458d0c6e059c6ebf3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Positional Encoding",
+            "children": [
+              {
+                "name": "RoPE",
+                "children": [
+                  {
+                    "name": "uses RoPE",
+                    "loci": [
+                      "a-01fa48aeea66d1c68adcbad822bac6d8"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Normalization",
+            "children": [
+              {
+                "name": "RMSNorm",
+                "children": [
+                  {
+                    "name": "uses RMSNorm",
+                    "loci": [
+                      "a-0108031cd6337cdc66902243b7d234d4"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Feed-forward Network",
+            "children": [
+              {
+                "name": "SwiGLU",
+                "children": [
+                  {
+                    "name": "intermediate size 5632",
+                    "loci": [
+                      "a-6dfa445177c2a884f74c8c5aa490f801"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Vocabulary",
+            "children": [
+              {
+                "name": "Token Count",
+                "children": [
+                  {
+                    "name": "32768 tokens",
+                    "loci": [
+                      "a-966563a96358e7b1983d2a4026e4ea8a"
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Mask Token ID",
+                "children": [
+                  {
+                    "name": "32766",
+                    "loci": [
+                      "a-e61a6f94eed9073b1bfcacfe47dbd1c2"
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Pad Token ID",
+                "children": [
+                  {
+                    "name": "32767",
+                    "loci": [
+                      "a-a8a9a1c5abb5f69e2556c7beb5a809c1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Inference",
+            "children": [
+              {
+                "name": "Denoising Steps",
+                "children": [
+                  {
+                    "name": "Default inference uses 12 denoising steps",
+                    "loci": [
+                      "a-e73eba4c4c9f0a123065eb559ad01e8e"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Training",
+            "children": [
+              {
+                "name": "Training Loss",
+                "children": [
+                  {
+                    "name": "Final loss 2.2561 at epoch 5",
+                    "loci": [
+                      "a-300fcac39a36b95746f917da51ea63cf"
+                    ]
+                  },
+                  {
+                    "name": "Epoch 1 training loss 3.78",
+                    "loci": [
+                      "a-07e327d47e29d27a672bc2fd7c87111a"
+                    ]
+                  },
+                  {
+                    "name": "Epoch 2 training loss 2.89",
+                    "loci": [
+                      "a-b4fb2dab460392e904197102d97b08a5"
+                    ]
+                  },
+                  {
+                    "name": "Epoch 3 training loss 2.67",
+                    "loci": [
+                      "a-61d961394ceee22f7ea45375d9297f3a"
+                    ]
+                  },
+                  {
+                    "name": "Epoch 4 training loss 2.42",
+                    "loci": [
+                      "a-03669821bb05e111a71c874c980ed0e3"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Checkpoint",
+            "children": [
+              {
+                "name": "Checkpoint Size",
+                "children": [
+                  {
+                    "name": "Epoch-5 FP16 checkpoint size 2659500664 bytes",
+                    "loci": [
+                      "a-9de98293a5040be41334084481e041c9"
+                    ]
+                  },
+                  {
+                    "name": "V2 scratch checkpoint at step 82002 size 16665974950 bytes",
+                    "loci": [
+                      "a-47edb7305fd1c003589a7b0f5ac04359"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Repository Management",
+            "children": [
+              {
+                "name": "Git LFS Splitting",
+                "children": [
+                  {
+                    "name": "GitHub rejects single LFS objects above 2\u202fGB",
+                    "loci": [
+                      "a-6cfbb78cffd88911b9632a8195425ced"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tokenizer",
+            "children": [
+              {
+                "name": "File Size",
+                "children": [
+                  {
+                    "name": "Tokenizer file is 2,253,607 bytes",
+                    "loci": [
+                      "a-3fbd9f0b13bca4ccd4b7d0bc67fc521e"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Artifacts",
+            "children": [
+              {
+                "name": "Content Addressing",
+                "children": [
+                  {
+                    "name": "Artifacts use BLAKE2b",
+                    "loci": [
+                      "a-13fc39ead80638e386a8d69b43513b68"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Inference Scripts",
+            "children": [
+              {
+                "name": "CUDA Inference",
+                "children": [
+                  {
+                    "name": "run_cassandra.py used for local CUDA",
+                    "loci": [
+                      "a-dba7e2a64c6c103428e8a4babedffa37"
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Chunked Generation",
+                "children": [
+                  {
+                    "name": "chunk_gen.py used for chunked generation",
+                    "loci": [
+                      "a-5ab996161f69ffc5872c7c05c49e608d"
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Flask Chat Completion",
+                "children": [
+                  {
+                    "name": "serve_ep5.py provides Flask chat-completion endpoint",
+                    "loci": [
+                      "a-cb24521ee08e8cf583f9c91347361bd1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "License",
+            "children": [
+              {
+                "name": "Apache 2.0",
+                "children": [
+                  {
+                    "name": "Repository licensed Apache 2.0",
+                    "loci": [
+                      "a-690d08e7fa077d110c730442b795875b"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "s-89e5e5722169a83e2fbe81b82803fc81",
+      "bytes": 1056
+    }
+  ],
+  "artifacts": {
+    "ltmi": "{\"v\":\"ltmi/0.1\",\"kind\":\"manifest\",\"corpus_id\":\"c-1bb0e0064917e34ae8d1fed8ee1a5bd1\",\"loci\":23,\"lattice\":{\"dim\":64,\"shape\":\"cube\"},\"created\":\"2026-05-08T23:25:58.156Z\",\"sources\":[\"s-89e5e5722169a83e2fbe81b82803fc81\"],\"producer\":\"sophiaxt-server/ltmi-xt-0.1\",\"crystallizer_model\":\"q3m:mercury-2\",\"topologizer_model\":\"q3m:mercury-2\"}\n{\"id\":\"a-38472c6c0805a98d681d13d5dc17eeff\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Architecture\",\"Layer Configuration\",\"28 layers, hidden size 2048\"],\"lattice\":[16,35,20],\"statement\":\"The Cassandra T1 model is a 28-layer transformer with a hidden size of 2048.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,76]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-231c93047194235458d0c6e059c6ebf3\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Architecture\",\"Grouped-Query Attention\",\"16 query heads, 4 key-value heads\"],\"lattice\":[16,35,15],\"statement\":\"The Cassandra T1 model uses grouped-query attention with 16 query heads and 4 key-value heads.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,94]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-01fa48aeea66d1c68adcbad822bac6d8\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Positional Encoding\",\"RoPE\",\"uses RoPE\"],\"lattice\":[16,49,49],\"statement\":\"The Cassandra T1 model uses RoPE for position encoding.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,55]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-0108031cd6337cdc66902243b7d234d4\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Normalization\",\"RMSNorm\",\"uses RMSNorm\"],\"lattice\":[16,21,24],\"statement\":\"The Cassandra T1 model uses RMSNorm for normalization.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,54]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-6dfa445177c2a884f74c8c5aa490f801\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Feed-forward Network\",\"SwiGLU\",\"intermediate size 5632\"],\"lattice\":[16,29,23],\"statement\":\"The feed-forward network of the Cassandra T1 model uses SwiGLU with intermediate size 5632.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,91]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-966563a96358e7b1983d2a4026e4ea8a\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Vocabulary\",\"Token Count\",\"32768 tokens\"],\"lattice\":[16,22,22],\"statement\":\"The Cassandra T1 model vocabulary contains 32768 tokens.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,56]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-e61a6f94eed9073b1bfcacfe47dbd1c2\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Vocabulary\",\"Mask Token ID\",\"32766\"],\"lattice\":[16,22,23],\"statement\":\"The mask token id of the Cassandra T1 model is 32766.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,53]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-a8a9a1c5abb5f69e2556c7beb5a809c1\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Vocabulary\",\"Pad Token ID\",\"32767\"],\"lattice\":[16,22,27],\"statement\":\"The pad token id of the Cassandra T1 model is 32767.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,52]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-e73eba4c4c9f0a123065eb559ad01e8e\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Inference\",\"Denoising Steps\",\"Default inference uses 12 denoising steps\"],\"lattice\":[16,59,3],\"statement\":\"Default inference for the Cassandra T1 model uses 12 denoising steps.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,69]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-300fcac39a36b95746f917da51ea63cf\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Training\",\"Training Loss\",\"Final loss 2.2561 at epoch 5\"],\"lattice\":[16,61,38],\"statement\":\"Training of the Cassandra T1 model reached a final loss of 2.2561 at epoch 5.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,77]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-07e327d47e29d27a672bc2fd7c87111a\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Training\",\"Training Loss\",\"Epoch 1 training loss 3.78\"],\"lattice\":[16,61,38],\"statement\":\"At epoch 1, training loss of the Cassandra T1 model was 3.78.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,61]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-b4fb2dab460392e904197102d97b08a5\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Training\",\"Training Loss\",\"Epoch 2 training loss 2.89\"],\"lattice\":[16,61,38],\"statement\":\"At epoch 2, training loss of the Cassandra T1 model was 2.89.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,61]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-61d961394ceee22f7ea45375d9297f3a\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Training\",\"Training Loss\",\"Epoch 3 training loss 2.67\"],\"lattice\":[16,61,38],\"statement\":\"At epoch 3, training loss of the Cassandra T1 model was 2.67.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,61]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-03669821bb05e111a71c874c980ed0e3\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Training\",\"Training Loss\",\"Epoch 4 training loss 2.42\"],\"lattice\":[16,61,38],\"statement\":\"At epoch 4, training loss of the Cassandra T1 model was 2.42.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,61]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-9de98293a5040be41334084481e041c9\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Checkpoint\",\"Checkpoint Size\",\"Epoch-5 FP16 checkpoint size 2659500664 bytes\"],\"lattice\":[16,8,48],\"statement\":\"The released epoch-5 FP16 checkpoint for the Cassandra T1 model is 2659500664 bytes.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,84]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-47edb7305fd1c003589a7b0f5ac04359\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Checkpoint\",\"Checkpoint Size\",\"V2 scratch checkpoint at step 82002 size 16665974950 bytes\"],\"lattice\":[16,8,48],\"statement\":\"The released v2 scratch checkpoint for the Cassandra T1 model at step 82002 is 16665974950 bytes.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,97]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-6cfbb78cffd88911b9632a8195425ced\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Repository Management\",\"Git LFS Splitting\",\"GitHub rejects single LFS objects above 2\u202fGB\"],\"lattice\":[16,63,31],\"statement\":\"Both checkpoints are split into Git LFS parts because GitHub rejects single LFS objects above 2 GB.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,99]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-3fbd9f0b13bca4ccd4b7d0bc67fc521e\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Tokenizer\",\"File Size\",\"Tokenizer file is 2,253,607 bytes\"],\"lattice\":[16,9,62],\"statement\":\"The tokenizer file for the Cassandra T1 model is 2253607 bytes.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,63]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-13fc39ead80638e386a8d69b43513b68\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Artifacts\",\"Content Addressing\",\"Artifacts use BLAKE2b\"],\"lattice\":[16,51,20],\"statement\":\"All artifacts of the Cassandra T1 model are content-addressed using BLAKE2b.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,76]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-dba7e2a64c6c103428e8a4babedffa37\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Inference Scripts\",\"CUDA Inference\",\"run_cassandra.py used for local CUDA\"],\"lattice\":[16,32,57],\"statement\":\"The inference script run_cassandra.py is used for local CUDA.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,61]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-5ab996161f69ffc5872c7c05c49e608d\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Inference Scripts\",\"Chunked Generation\",\"chunk_gen.py used for chunked generation\"],\"lattice\":[16,32,30],\"statement\":\"The inference script chunk_gen.py is used for chunked generation.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,65]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-cb24521ee08e8cf583f9c91347361bd1\",\"breadcrumb\":[\"Cassandra T1 Model\",\"Inference Scripts\",\"Flask Chat Completion\",\"serve_ep5.py provides Flask chat-completion endpoint\"],\"lattice\":[16,32,11],\"statement\":\"The inference script serve_ep5.py provides a Flask chat-completion endpoint.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,76]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}\n{\"id\":\"a-690d08e7fa077d110c730442b795875b\",\"breadcrumb\":[\"Cassandra T1 Model\",\"License\",\"Apache 2.0\",\"Repository licensed Apache 2.0\"],\"lattice\":[16,41,18],\"statement\":\"The repository for the Cassandra T1 model is licensed Apache 2.0.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-89e5e5722169a83e2fbe81b82803fc81\",\"offset\":[0,65]},\"first_seen\":\"2026-05-08T23:25:58.155Z\",\"last_referenced\":\"2026-05-08T23:25:58.155Z\",\"references\":0}",
+    "trainingJsonl": "{\"instruction\":\"Provide the Layer Configuration of Architecture: 28 layers, hidden size 2048.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Architecture\\nConcept: Layer Configuration\",\"output\":\"The Cassandra T1 model is a 28-layer transformer with a hidden size of 2048.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-38472c6c0805a98d681d13d5dc17eeff\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Grouped-Query Attention of Architecture: 16 query heads, 4 key-value heads.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Architecture\\nConcept: Grouped-Query Attention\",\"output\":\"The Cassandra T1 model uses grouped-query attention with 16 query heads and 4 key-value heads.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-231c93047194235458d0c6e059c6ebf3\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the RoPE of Positional Encoding: uses RoPE.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Positional Encoding\\nConcept: RoPE\",\"output\":\"The Cassandra T1 model uses RoPE for position encoding.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-01fa48aeea66d1c68adcbad822bac6d8\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the RMSNorm of Normalization: uses RMSNorm.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Normalization\\nConcept: RMSNorm\",\"output\":\"The Cassandra T1 model uses RMSNorm for normalization.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-0108031cd6337cdc66902243b7d234d4\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the SwiGLU of Feed-forward Network: intermediate size 5632.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Feed-forward Network\\nConcept: SwiGLU\",\"output\":\"The feed-forward network of the Cassandra T1 model uses SwiGLU with intermediate size 5632.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-6dfa445177c2a884f74c8c5aa490f801\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Token Count of Vocabulary: 32768 tokens.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Vocabulary\\nConcept: Token Count\",\"output\":\"The Cassandra T1 model vocabulary contains 32768 tokens.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-966563a96358e7b1983d2a4026e4ea8a\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Mask Token ID of Vocabulary: 32766.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Vocabulary\\nConcept: Mask Token ID\",\"output\":\"The mask token id of the Cassandra T1 model is 32766.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-e61a6f94eed9073b1bfcacfe47dbd1c2\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Pad Token ID of Vocabulary: 32767.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Vocabulary\\nConcept: Pad Token ID\",\"output\":\"The pad token id of the Cassandra T1 model is 32767.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-a8a9a1c5abb5f69e2556c7beb5a809c1\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Denoising Steps of Inference: Default inference uses 12 denoising steps.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Inference\\nConcept: Denoising Steps\",\"output\":\"Default inference for the Cassandra T1 model uses 12 denoising steps.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-e73eba4c4c9f0a123065eb559ad01e8e\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Training Loss of Training: Final loss 2.2561 at epoch 5.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Training\\nConcept: Training Loss\",\"output\":\"Training of the Cassandra T1 model reached a final loss of 2.2561 at epoch 5.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-300fcac39a36b95746f917da51ea63cf\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Training Loss of Training: Epoch 1 training loss 3.78.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Training\\nConcept: Training Loss\",\"output\":\"At epoch 1, training loss of the Cassandra T1 model was 3.78.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-07e327d47e29d27a672bc2fd7c87111a\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Training Loss of Training: Epoch 2 training loss 2.89.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Training\\nConcept: Training Loss\",\"output\":\"At epoch 2, training loss of the Cassandra T1 model was 2.89.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-b4fb2dab460392e904197102d97b08a5\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Training Loss of Training: Epoch 3 training loss 2.67.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Training\\nConcept: Training Loss\",\"output\":\"At epoch 3, training loss of the Cassandra T1 model was 2.67.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-61d961394ceee22f7ea45375d9297f3a\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Training Loss of Training: Epoch 4 training loss 2.42.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Training\\nConcept: Training Loss\",\"output\":\"At epoch 4, training loss of the Cassandra T1 model was 2.42.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-03669821bb05e111a71c874c980ed0e3\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Checkpoint Size of Checkpoint: Epoch-5 FP16 checkpoint size 2659500664 bytes.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Checkpoint\\nConcept: Checkpoint Size\",\"output\":\"The released epoch-5 FP16 checkpoint for the Cassandra T1 model is 2659500664 bytes.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-9de98293a5040be41334084481e041c9\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Checkpoint Size of Checkpoint: V2 scratch checkpoint at step 82002 size 16665974950 bytes.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Checkpoint\\nConcept: Checkpoint Size\",\"output\":\"The released v2 scratch checkpoint for the Cassandra T1 model at step 82002 is 16665974950 bytes.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-47edb7305fd1c003589a7b0f5ac04359\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Git LFS Splitting of Repository Management: GitHub rejects single LFS objects above 2\u202fGB.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Repository Management\\nConcept: Git LFS Splitting\",\"output\":\"Both checkpoints are split into Git LFS parts because GitHub rejects single LFS objects above 2 GB.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-6cfbb78cffd88911b9632a8195425ced\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the File Size of Tokenizer: Tokenizer file is 2,253,607 bytes.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Tokenizer\\nConcept: File Size\",\"output\":\"The tokenizer file for the Cassandra T1 model is 2253607 bytes.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-3fbd9f0b13bca4ccd4b7d0bc67fc521e\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Content Addressing of Artifacts: Artifacts use BLAKE2b.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Artifacts\\nConcept: Content Addressing\",\"output\":\"All artifacts of the Cassandra T1 model are content-addressed using BLAKE2b.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-13fc39ead80638e386a8d69b43513b68\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the CUDA Inference of Inference Scripts: run_cassandra.py used for local CUDA.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Inference Scripts\\nConcept: CUDA Inference\",\"output\":\"The inference script run_cassandra.py is used for local CUDA.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-dba7e2a64c6c103428e8a4babedffa37\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Chunked Generation of Inference Scripts: chunk_gen.py used for chunked generation.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Inference Scripts\\nConcept: Chunked Generation\",\"output\":\"The inference script chunk_gen.py is used for chunked generation.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-5ab996161f69ffc5872c7c05c49e608d\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Flask Chat Completion of Inference Scripts: serve_ep5.py provides Flask chat-completion endpoint.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: Inference Scripts\\nConcept: Flask Chat Completion\",\"output\":\"The inference script serve_ep5.py provides a Flask chat-completion endpoint.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-cb24521ee08e8cf583f9c91347361bd1\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}\n{\"instruction\":\"Provide the Apache 2.0 of License: Repository licensed Apache 2.0.\",\"input\":\"Topic: Cassandra T1 Model\\nSubtopic: License\\nConcept: Apache 2.0\",\"output\":\"The repository for the Cassandra T1 model is licensed Apache 2.0.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-690d08e7fa077d110c730442b795875b\",\"source_id\":\"s-89e5e5722169a83e2fbe81b82803fc81\"}}"
+  }
+}

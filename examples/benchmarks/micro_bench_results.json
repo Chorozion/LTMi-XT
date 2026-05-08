@@ -1,0 +1,70 @@
+[
+  {
+    "test": "lattice_coord_stable",
+    "trials": 10000,
+    "stable": 10000,
+    "fraction": 1
+  },
+  {
+    "test": "lattice_cell_distinctness",
+    "trials": 10000,
+    "distinct_cells": 200,
+    "max_possible": 262144,
+    "utilization": 0.08
+  },
+  {
+    "test": "lattice_prefix_locality",
+    "trials": 1000,
+    "share_cell_when_prefix_matches": 1000,
+    "fraction": 1
+  },
+  {
+    "test": "locus_id_stable",
+    "trials": 10000,
+    "stable": 10000,
+    "fraction": 1
+  },
+  {
+    "test": "canonical_json_stable",
+    "trials": 10000,
+    "stable": 10000,
+    "fraction": 1
+  },
+  {
+    "test": "latticeCoord_perf",
+    "trials": 10000,
+    "totalMs": 169.7,
+    "perOpUs": 16.97
+  },
+  {
+    "test": "deriveLocusId_perf",
+    "trials": 10000,
+    "totalMs": 148.29,
+    "perOpUs": 14.83
+  },
+  {
+    "test": "canonicalJson_perf",
+    "trials": 10000,
+    "totalMs": 41.97,
+    "perOpUs": 4.2
+  },
+  {
+    "test": "chebyshev_perf",
+    "trials": 10000,
+    "totalMs": 3.35,
+    "perOpUs": 0.34
+  },
+  {
+    "test": "jsonl_roundtrip_C2",
+    "loci_in": 23,
+    "loci_out": 23,
+    "match": true
+  },
+  {
+    "test": "token_savings_C2_top6",
+    "full_corpus_bytes": 1056,
+    "top6_loci_bytes": 895,
+    "reduction_factor": 1.18,
+    "note": "Bytes proxy for tokens. Real token reduction will vary with tokenizer."
+  }
+]

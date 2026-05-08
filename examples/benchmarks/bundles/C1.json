@@ -1,0 +1,487 @@
+{
+  "success": true,
+  "manifest": {
+    "v": "ltmi/0.1",
+    "kind": "manifest",
+    "corpus_id": "c-caa4cf8516535a07d392ca2caab0a23d",
+    "loci": 10,
+    "lattice": {
+      "dim": 64,
+      "shape": "cube"
+    },
+    "created": "2026-05-08T23:25:49.908Z",
+    "sources": [
+      "s-6b551d303d2ff3dab9b2adb0e76ab2b1"
+    ],
+    "producer": "sophiaxt-server/ltmi-xt-0.1",
+    "crystallizer_model": "q3m:mercury-2",
+    "topologizer_model": "q3m:mercury-2"
+  },
+  "loci": [
+    {
+      "id": "a-ca38be467832843fae4ddefb5940173b",
+      "breadcrumb": [
+        "Cold Storage Business",
+        "Financial Performance",
+        "Margin",
+        "High margin part"
+      ],
+      "lattice": [
+        24,
+        43,
+        1
+      ],
+      "statement": "The Cold Storage line is the high-margin part of the business.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-6b551d303d2ff3dab9b2adb0e76ab2b1",
+        "offset": [
+          0,
+          62
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:49.907Z",
+      "last_referenced": "2026-05-08T23:25:49.907Z",
+      "references": 0
+    },
+    {
+      "id": "a-9635bddbb23fe1605759181ce3c33f33",
+      "breadcrumb": [
+        "Cold Storage Business",
+        "Fleet Operations",
+        "Truck Fleet",
+        "Three trucks operating"
+      ],
+      "lattice": [
+        24,
+        14,
+        12
+      ],
+      "statement": "The business currently operates three trucks across the metro area.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-6b551d303d2ff3dab9b2adb0e76ab2b1",
+        "offset": [
+          0,
+          67
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:49.907Z",
+      "last_referenced": "2026-05-08T23:25:49.907Z",
+      "references": 0
+    },
+    {
+      "id": "a-f132cd4cdbd85142a2a83ff681ffa157",
+      "breadcrumb": [
+        "Cold Storage Business",
+        "Staffing",
+        "Truck Crew",
+        "One driver and one technician"
+      ],
+      "lattice": [
+        24,
+        62,
+        63
+      ],
+      "statement": "Each truck is staffed with one driver and one technician on long routes.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-6b551d303d2ff3dab9b2adb0e76ab2b1",
+        "offset": [
+          120,
+          192
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:49.907Z",
+      "last_referenced": "2026-05-08T23:25:49.907Z",
+      "references": 0
+    },
+    {
+      "id": "a-1e191a68260d25cff585f186aa17912c",
+      "breadcrumb": [
+        "Cold Storage Business",
+        "Losses & Claims",
+        "Coolant Mismatch",
+        "Two shipments lost costing $4,800"
+      ],
+      "lattice": [
+        24,
+        20,
+        33
+      ],
+      "statement": "In the last quarter, the business lost two shipments due to coolant mismatch, which cost the business roughly $4,800 in claims.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-6b551d303d2ff3dab9b2adb0e76ab2b1",
+        "offset": [
+          0,
+          120
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:49.907Z",
+      "last_referenced": "2026-05-08T23:25:49.907Z",
+      "references": 0
+    },
+    {
+      "id": "a-eb14281096ce56fc2eaa45ef81d0217d",
+      "breadcrumb": [
+        "Cold Storage Business",
+        "Standard Workflow",
+        "Process Steps",
+        "Customer call to signature"
+      ],
+      "lattice": [
+        24,
+        40,
+        5
+      ],
+      "statement": "The standard workflow includes a customer calling in, dispatch logging the pickup, the driver collecting, the technician verifying temperature on arrival, the business delivering, and the customer signing for it.",
+      "kind": "definition",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-6b551d303d2ff3dab9b2adb0e76ab2b1",
+        "offset": [
+          0,
+          120
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:49.907Z",
+      "last_referenced": "2026-05-08T23:25:49.907Z",
+      "references": 0
+    },
+    {
+      "id": "a-aba84d86ba13f2d79da49e7914a39e2a",
+      "breadcrumb": [
+        "Cold Storage Business",
+        "Equipment",
+        "VIP Panel Inserts",
+        "Used for dry ice loads"
+      ],
+      "lattice": [
+        24,
+        19,
+        40
+      ],
+      "statement": "For dry ice loads, the business always uses the VIP panel inserts.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-6b551d303d2ff3dab9b2adb0e76ab2b1",
+        "offset": [
+          0,
+          66
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:49.907Z",
+      "last_referenced": "2026-05-08T23:25:49.907Z",
+      "references": 0
+    },
+    {
+      "id": "a-00a043bf9beab42a161957e8cc80796f",
+      "breadcrumb": [
+        "Cold Storage Business",
+        "Equipment",
+        "VIP Panel Inserts",
+        "Higher upfront cost, zero failure"
+      ],
+      "lattice": [
+        24,
+        19,
+        40
+      ],
+      "statement": "VIP panel inserts cost more up front, but their failure rate is essentially zero.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-6b551d303d2ff3dab9b2adb0e76ab2b1",
+        "offset": [
+          0,
+          81
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:49.907Z",
+      "last_referenced": "2026-05-08T23:25:49.907Z",
+      "references": 0
+    },
+    {
+      "id": "a-0b166dd650165eb9adb52a5549c7d7a8",
+      "breadcrumb": [
+        "Cold Storage Business",
+        "Equipment",
+        "Gel Pack Loads",
+        "Cheaper, safe under 18h"
+      ],
+      "lattice": [
+        24,
+        19,
+        49
+      ],
+      "statement": "Gel pack loads are cheaper but are only safe for transit times under 18 hours.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-6b551d303d2ff3dab9b2adb0e76ab2b1",
+        "offset": [
+          580,
+          658
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:49.907Z",
+      "last_referenced": "2026-05-08T23:25:49.907Z",
+      "references": 0
+    },
+    {
+      "id": "a-cee5da87b3678889bfca81ff37334196",
+      "breadcrumb": [
+        "Logistics",
+        "Cold Chain",
+        "Dry Ice Usage",
+        "Use for >18h transit"
+      ],
+      "lattice": [
+        47,
+        40,
+        7
+      ],
+      "statement": "For transit times longer than 18 hours, dry ice should be used.",
+      "kind": "instruction",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-6b551d303d2ff3dab9b2adb0e76ab2b1",
+        "offset": [
+          0,
+          63
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:49.907Z",
+      "last_referenced": "2026-05-08T23:25:49.907Z",
+      "references": 0
+    },
+    {
+      "id": "a-a5f5d678cb82a60f669b8fb58b4e26e8",
+      "breadcrumb": [
+        "Supply Chain Modeling",
+        "Lane Modeling",
+        "Sophia Key 3M",
+        "Predicts viable configuration"
+      ],
+      "lattice": [
+        35,
+        11,
+        35
+      ],
+      "statement": "The Sophia Key 3M tool can model a lane and tell the business in advance which configuration will hold.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-6b551d303d2ff3dab9b2adb0e76ab2b1",
+        "offset": [
+          694,
+          783
+        ]
+      },
+      "first_seen": "2026-05-08T23:25:49.907Z",
+      "last_referenced": "2026-05-08T23:25:49.907Z",
+      "references": 0
+    }
+  ],
+  "breadcrumbTree": {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "Cold Storage Business",
+        "children": [
+          {
+            "name": "Financial Performance",
+            "children": [
+              {
+                "name": "Margin",
+                "children": [
+                  {
+                    "name": "High margin part",
+                    "loci": [
+                      "a-ca38be467832843fae4ddefb5940173b"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Fleet Operations",
+            "children": [
+              {
+                "name": "Truck Fleet",
+                "children": [
+                  {
+                    "name": "Three trucks operating",
+                    "loci": [
+                      "a-9635bddbb23fe1605759181ce3c33f33"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Staffing",
+            "children": [
+              {
+                "name": "Truck Crew",
+                "children": [
+                  {
+                    "name": "One driver and one technician",
+                    "loci": [
+                      "a-f132cd4cdbd85142a2a83ff681ffa157"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Losses & Claims",
+            "children": [
+              {
+                "name": "Coolant Mismatch",
+                "children": [
+                  {
+                    "name": "Two shipments lost costing $4,800",
+                    "loci": [
+                      "a-1e191a68260d25cff585f186aa17912c"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Standard Workflow",
+            "children": [
+              {
+                "name": "Process Steps",
+                "children": [
+                  {
+                    "name": "Customer call to signature",
+                    "loci": [
+                      "a-eb14281096ce56fc2eaa45ef81d0217d"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Equipment",
+            "children": [
+              {
+                "name": "VIP Panel Inserts",
+                "children": [
+                  {
+                    "name": "Used for dry ice loads",
+                    "loci": [
+                      "a-aba84d86ba13f2d79da49e7914a39e2a"
+                    ]
+                  },
+                  {
+                    "name": "Higher upfront cost, zero failure",
+                    "loci": [
+                      "a-00a043bf9beab42a161957e8cc80796f"
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Gel Pack Loads",
+                "children": [
+                  {
+                    "name": "Cheaper, safe under 18h",
+                    "loci": [
+                      "a-0b166dd650165eb9adb52a5549c7d7a8"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Logistics",
+        "children": [
+          {
+            "name": "Cold Chain",
+            "children": [
+              {
+                "name": "Dry Ice Usage",
+                "children": [
+                  {
+                    "name": "Use for >18h transit",
+                    "loci": [
+                      "a-cee5da87b3678889bfca81ff37334196"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Supply Chain Modeling",
+        "children": [
+          {
+            "name": "Lane Modeling",
+            "children": [
+              {
+                "name": "Sophia Key 3M",
+                "children": [
+                  {
+                    "name": "Predicts viable configuration",
+                    "loci": [
+                      "a-a5f5d678cb82a60f669b8fb58b4e26e8"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "s-6b551d303d2ff3dab9b2adb0e76ab2b1",
+      "bytes": 783
+    }
+  ],
+  "artifacts": {
+    "ltmi": "{\"v\":\"ltmi/0.1\",\"kind\":\"manifest\",\"corpus_id\":\"c-caa4cf8516535a07d392ca2caab0a23d\",\"loci\":10,\"lattice\":{\"dim\":64,\"shape\":\"cube\"},\"created\":\"2026-05-08T23:25:49.908Z\",\"sources\":[\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\"],\"producer\":\"sophiaxt-server/ltmi-xt-0.1\",\"crystallizer_model\":\"q3m:mercury-2\",\"topologizer_model\":\"q3m:mercury-2\"}\n{\"id\":\"a-ca38be467832843fae4ddefb5940173b\",\"breadcrumb\":[\"Cold Storage Business\",\"Financial Performance\",\"Margin\",\"High margin part\"],\"lattice\":[24,43,1],\"statement\":\"The Cold Storage line is the high-margin part of the business.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\",\"offset\":[0,62]},\"first_seen\":\"2026-05-08T23:25:49.907Z\",\"last_referenced\":\"2026-05-08T23:25:49.907Z\",\"references\":0}\n{\"id\":\"a-9635bddbb23fe1605759181ce3c33f33\",\"breadcrumb\":[\"Cold Storage Business\",\"Fleet Operations\",\"Truck Fleet\",\"Three trucks operating\"],\"lattice\":[24,14,12],\"statement\":\"The business currently operates three trucks across the metro area.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\",\"offset\":[0,67]},\"first_seen\":\"2026-05-08T23:25:49.907Z\",\"last_referenced\":\"2026-05-08T23:25:49.907Z\",\"references\":0}\n{\"id\":\"a-f132cd4cdbd85142a2a83ff681ffa157\",\"breadcrumb\":[\"Cold Storage Business\",\"Staffing\",\"Truck Crew\",\"One driver and one technician\"],\"lattice\":[24,62,63],\"statement\":\"Each truck is staffed with one driver and one technician on long routes.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\",\"offset\":[120,192]},\"first_seen\":\"2026-05-08T23:25:49.907Z\",\"last_referenced\":\"2026-05-08T23:25:49.907Z\",\"references\":0}\n{\"id\":\"a-1e191a68260d25cff585f186aa17912c\",\"breadcrumb\":[\"Cold Storage Business\",\"Losses & Claims\",\"Coolant Mismatch\",\"Two shipments lost costing $4,800\"],\"lattice\":[24,20,33],\"statement\":\"In the last quarter, the business lost two shipments due to coolant mismatch, which cost the business roughly $4,800 in claims.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\",\"offset\":[0,120]},\"first_seen\":\"2026-05-08T23:25:49.907Z\",\"last_referenced\":\"2026-05-08T23:25:49.907Z\",\"references\":0}\n{\"id\":\"a-eb14281096ce56fc2eaa45ef81d0217d\",\"breadcrumb\":[\"Cold Storage Business\",\"Standard Workflow\",\"Process Steps\",\"Customer call to signature\"],\"lattice\":[24,40,5],\"statement\":\"The standard workflow includes a customer calling in, dispatch logging the pickup, the driver collecting, the technician verifying temperature on arrival, the business delivering, and the customer signing for it.\",\"kind\":\"definition\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\",\"offset\":[0,120]},\"first_seen\":\"2026-05-08T23:25:49.907Z\",\"last_referenced\":\"2026-05-08T23:25:49.907Z\",\"references\":0}\n{\"id\":\"a-aba84d86ba13f2d79da49e7914a39e2a\",\"breadcrumb\":[\"Cold Storage Business\",\"Equipment\",\"VIP Panel Inserts\",\"Used for dry ice loads\"],\"lattice\":[24,19,40],\"statement\":\"For dry ice loads, the business always uses the VIP panel inserts.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\",\"offset\":[0,66]},\"first_seen\":\"2026-05-08T23:25:49.907Z\",\"last_referenced\":\"2026-05-08T23:25:49.907Z\",\"references\":0}\n{\"id\":\"a-00a043bf9beab42a161957e8cc80796f\",\"breadcrumb\":[\"Cold Storage Business\",\"Equipment\",\"VIP Panel Inserts\",\"Higher upfront cost, zero failure\"],\"lattice\":[24,19,40],\"statement\":\"VIP panel inserts cost more up front, but their failure rate is essentially zero.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\",\"offset\":[0,81]},\"first_seen\":\"2026-05-08T23:25:49.907Z\",\"last_referenced\":\"2026-05-08T23:25:49.907Z\",\"references\":0}\n{\"id\":\"a-0b166dd650165eb9adb52a5549c7d7a8\",\"breadcrumb\":[\"Cold Storage Business\",\"Equipment\",\"Gel Pack Loads\",\"Cheaper, safe under 18h\"],\"lattice\":[24,19,49],\"statement\":\"Gel pack loads are cheaper but are only safe for transit times under 18 hours.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\",\"offset\":[580,658]},\"first_seen\":\"2026-05-08T23:25:49.907Z\",\"last_referenced\":\"2026-05-08T23:25:49.907Z\",\"references\":0}\n{\"id\":\"a-cee5da87b3678889bfca81ff37334196\",\"breadcrumb\":[\"Logistics\",\"Cold Chain\",\"Dry Ice Usage\",\"Use for >18h transit\"],\"lattice\":[47,40,7],\"statement\":\"For transit times longer than 18 hours, dry ice should be used.\",\"kind\":\"instruction\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\",\"offset\":[0,63]},\"first_seen\":\"2026-05-08T23:25:49.907Z\",\"last_referenced\":\"2026-05-08T23:25:49.907Z\",\"references\":0}\n{\"id\":\"a-a5f5d678cb82a60f669b8fb58b4e26e8\",\"breadcrumb\":[\"Supply Chain Modeling\",\"Lane Modeling\",\"Sophia Key 3M\",\"Predicts viable configuration\"],\"lattice\":[35,11,35],\"statement\":\"The Sophia Key 3M tool can model a lane and tell the business in advance which configuration will hold.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\",\"offset\":[694,783]},\"first_seen\":\"2026-05-08T23:25:49.907Z\",\"last_referenced\":\"2026-05-08T23:25:49.907Z\",\"references\":0}",
+    "trainingJsonl": "{\"instruction\":\"Provide the Margin of Financial Performance: High margin part.\",\"input\":\"Topic: Cold Storage Business\\nSubtopic: Financial Performance\\nConcept: Margin\",\"output\":\"The Cold Storage line is the high-margin part of the business.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-ca38be467832843fae4ddefb5940173b\",\"source_id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\"}}\n{\"instruction\":\"Provide the Truck Fleet of Fleet Operations: Three trucks operating.\",\"input\":\"Topic: Cold Storage Business\\nSubtopic: Fleet Operations\\nConcept: Truck Fleet\",\"output\":\"The business currently operates three trucks across the metro area.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-9635bddbb23fe1605759181ce3c33f33\",\"source_id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\"}}\n{\"instruction\":\"Provide the Truck Crew of Staffing: One driver and one technician.\",\"input\":\"Topic: Cold Storage Business\\nSubtopic: Staffing\\nConcept: Truck Crew\",\"output\":\"Each truck is staffed with one driver and one technician on long routes.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-f132cd4cdbd85142a2a83ff681ffa157\",\"source_id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\"}}\n{\"instruction\":\"Provide the Coolant Mismatch of Losses & Claims: Two shipments lost costing $4,800.\",\"input\":\"Topic: Cold Storage Business\\nSubtopic: Losses & Claims\\nConcept: Coolant Mismatch\",\"output\":\"In the last quarter, the business lost two shipments due to coolant mismatch, which cost the business roughly $4,800 in claims.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-1e191a68260d25cff585f186aa17912c\",\"source_id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\"}}\n{\"instruction\":\"Provide the Process Steps of Standard Workflow: Customer call to signature.\",\"input\":\"Topic: Cold Storage Business\\nSubtopic: Standard Workflow\\nConcept: Process Steps\",\"output\":\"The standard workflow includes a customer calling in, dispatch logging the pickup, the driver collecting, the technician verifying temperature on arrival, the business delivering, and the customer signing for it.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"definition\"},\"meta\":{\"locus_id\":\"a-eb14281096ce56fc2eaa45ef81d0217d\",\"source_id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\"}}\n{\"instruction\":\"Provide the VIP Panel Inserts of Equipment: Used for dry ice loads.\",\"input\":\"Topic: Cold Storage Business\\nSubtopic: Equipment\\nConcept: VIP Panel Inserts\",\"output\":\"For dry ice loads, the business always uses the VIP panel inserts.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-aba84d86ba13f2d79da49e7914a39e2a\",\"source_id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\"}}\n{\"instruction\":\"Provide the VIP Panel Inserts of Equipment: Higher upfront cost, zero failure.\",\"input\":\"Topic: Cold Storage Business\\nSubtopic: Equipment\\nConcept: VIP Panel Inserts\",\"output\":\"VIP panel inserts cost more up front, but their failure rate is essentially zero.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-00a043bf9beab42a161957e8cc80796f\",\"source_id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\"}}\n{\"instruction\":\"Provide the Gel Pack Loads of Equipment: Cheaper, safe under 18h.\",\"input\":\"Topic: Cold Storage Business\\nSubtopic: Equipment\\nConcept: Gel Pack Loads\",\"output\":\"Gel pack loads are cheaper but are only safe for transit times under 18 hours.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-0b166dd650165eb9adb52a5549c7d7a8\",\"source_id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\"}}\n{\"instruction\":\"Provide the Dry Ice Usage of Cold Chain: Use for >18h transit.\",\"input\":\"Topic: Logistics\\nSubtopic: Cold Chain\\nConcept: Dry Ice Usage\",\"output\":\"For transit times longer than 18 hours, dry ice should be used.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"instruction\"},\"meta\":{\"locus_id\":\"a-cee5da87b3678889bfca81ff37334196\",\"source_id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\"}}\n{\"instruction\":\"Provide the Sophia Key 3M of Lane Modeling: Predicts viable configuration.\",\"input\":\"Topic: Supply Chain Modeling\\nSubtopic: Lane Modeling\\nConcept: Sophia Key 3M\",\"output\":\"The Sophia Key 3M tool can model a lane and tell the business in advance which configuration will hold.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-a5f5d678cb82a60f669b8fb58b4e26e8\",\"source_id\":\"s-6b551d303d2ff3dab9b2adb0e76ab2b1\"}}"
+  }
+}

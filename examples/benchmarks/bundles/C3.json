@@ -1,0 +1,737 @@
+{
+  "success": true,
+  "manifest": {
+    "v": "ltmi/0.1",
+    "kind": "manifest",
+    "corpus_id": "c-ba2b2ee96ddd7a7944d027493bdd52bd",
+    "loci": 15,
+    "lattice": {
+      "dim": 64,
+      "shape": "cube"
+    },
+    "created": "2026-05-08T23:26:04.248Z",
+    "sources": [
+      "s-bd59055ab265fd82767e0b435b4317cb"
+    ],
+    "producer": "sophiaxt-server/ltmi-xt-0.1",
+    "crystallizer_model": "q3m:mercury-2",
+    "topologizer_model": "q3m:mercury-2"
+  },
+  "loci": [
+    {
+      "id": "a-b3fe68ab298bd16661c4f8d50adbe1f8",
+      "breadcrumb": [
+        "Engineering",
+        "Release Management",
+        "LTMi-XT v0.1",
+        "closing out this week"
+      ],
+      "lattice": [
+        25,
+        25,
+        24
+      ],
+      "statement": "Engineering is closing out the LTMi-XT v0.1 release this week.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          35,
+          97
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-3098bacc571536c32b2c3c76d9b2413a",
+      "breadcrumb": [
+        "Engineering",
+        "Hiring",
+        "Senior Engineers",
+        "hired against implementation backlog"
+      ],
+      "lattice": [
+        25,
+        31,
+        46
+      ],
+      "statement": "Two senior engineers have been hired against the implementation backlog.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          98,
+          170
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-78c8c283dba574c068aa7eb3ab62c08f",
+      "breadcrumb": [
+        "Human Resources",
+        "Review Cycle",
+        "Review Schedule",
+        "starts Oct 14 runs three weeks"
+      ],
+      "lattice": [
+        10,
+        47,
+        14
+      ],
+      "statement": "The HR review cycle starts on October 14 and runs for three weeks.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          171,
+          237
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-f9c034eade3d87421332249be33f3681",
+      "breadcrumb": [
+        "Engineering",
+        "Compensation",
+        "Salary Bands",
+        "adjusted across all engineering levels"
+      ],
+      "lattice": [
+        25,
+        61,
+        23
+      ],
+      "statement": "Salary bands are being adjusted across all engineering levels.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          238,
+          300
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-978e398006703ab696bdd8f1653f57c7",
+      "breadcrumb": [
+        "Marketing",
+        "Campaigns",
+        "Lead Leak Scanner",
+        "launching with three paid placements"
+      ],
+      "lattice": [
+        61,
+        11,
+        22
+      ],
+      "statement": "Marketing is launching the lead leak scanner campaign with three paid placements.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          301,
+          382
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-965b5b65a0eb6ae049a0935d97248d28",
+      "breadcrumb": [
+        "Customer Operations",
+        "User Metrics",
+        "DiagBuddy Users",
+        "251 active users"
+      ],
+      "lattice": [
+        59,
+        41,
+        23
+      ],
+      "statement": "Customer ops reports 251 active DiagBuddy users.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          383,
+          431
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-7bec4c5e11f8083e9d2ada27e9c0c799",
+      "breadcrumb": [
+        "Customer Operations",
+        "Diagnostics",
+        "Diagnoses Logged",
+        "roughly 3000 logged"
+      ],
+      "lattice": [
+        59,
+        25,
+        39
+      ],
+      "statement": "Customer ops reports roughly 3000 diagnoses logged in the platform.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          0,
+          67
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-69c55eb44d270963c387dd1ed35be902",
+      "breadcrumb": [
+        "Finance",
+        "Billing",
+        "DiagBuddy Billing",
+        "live with two pricing tiers"
+      ],
+      "lattice": [
+        61,
+        41,
+        56
+      ],
+      "statement": "Stripe billing is live for DiagBuddy with two pricing tiers.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          482,
+          542
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-4ef1ef2a1f8dc085d0bd05ff7138d79a",
+      "breadcrumb": [
+        "Pricing",
+        "Tier Plans",
+        "Grandfathered Tier",
+        "Grandfathered tier at $20 per month is locked for users who signed up before February 15 2026."
+      ],
+      "lattice": [
+        33,
+        36,
+        15
+      ],
+      "statement": "The grandfathered tier at $20 per month is locked for users who signed up before February 15 2026.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          543,
+          641
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-9288092d2d899fddcc80e7d89bf2af6a",
+      "breadcrumb": [
+        "Pricing",
+        "Tier Plans",
+        "Standard Tier",
+        "The standard tier is $34.99 per month."
+      ],
+      "lattice": [
+        33,
+        36,
+        32
+      ],
+      "statement": "The standard tier is $34.99 per month.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          642,
+          680
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-c80617c06de2199248a5cf8111d8a6e4",
+      "breadcrumb": [
+        "Finance",
+        "Cash Runway",
+        "Cash On Hand",
+        "Finance reports cash on hand sufficient for 14 months at current burn."
+      ],
+      "lattice": [
+        61,
+        62,
+        44
+      ],
+      "statement": "Finance reports cash on hand sufficient for 14 months at current burn.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          681,
+          751
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-4794142b84e4f3572f18502aa2a73bf6",
+      "breadcrumb": [
+        "Governance",
+        "Board Meetings",
+        "Meeting Date",
+        "The board meeting is scheduled for October 30."
+      ],
+      "lattice": [
+        29,
+        34,
+        18
+      ],
+      "statement": "The board meeting is scheduled for October 30.",
+      "kind": "fact",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          752,
+          798
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-687cf2bb2e63de6e0590a9f9a5ba1d51",
+      "breadcrumb": [
+        "Operations",
+        "Task Deadlines",
+        "Diagnostic Accuracy Review",
+        "The customer ops lead must publish the diagnostic accuracy review before October 22."
+      ],
+      "lattice": [
+        45,
+        53,
+        30
+      ],
+      "statement": "The customer ops lead must publish the diagnostic accuracy review before October 22.",
+      "kind": "instruction",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          817,
+          901
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-dd21c16f6d8358a748a243a5b2ebbb07",
+      "breadcrumb": [
+        "Operations",
+        "Task Deadlines",
+        "Lead Leak Campaign",
+        "The marketing director must finalize the lead leak campaign creative by October 18."
+      ],
+      "lattice": [
+        45,
+        53,
+        63
+      ],
+      "statement": "The marketing director must finalize the lead leak campaign creative by October 18.",
+      "kind": "instruction",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          898,
+          981
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    },
+    {
+      "id": "a-91676a360ef372e53f6636a1ebd6e8ea",
+      "breadcrumb": [
+        "Operations",
+        "Task Deadlines",
+        "LTMi-XT Benchmark",
+        "The engineering lead must publish the LTMi-XT benchmark report by October 25."
+      ],
+      "lattice": [
+        45,
+        53,
+        62
+      ],
+      "statement": "The engineering lead must publish the LTMi-XT benchmark report by October 25.",
+      "kind": "instruction",
+      "confidence": 1,
+      "horizon": "short",
+      "decay": 1,
+      "source": {
+        "id": "s-bd59055ab265fd82767e0b435b4317cb",
+        "offset": [
+          982,
+          1059
+        ]
+      },
+      "first_seen": "2026-05-08T23:26:04.247Z",
+      "last_referenced": "2026-05-08T23:26:04.247Z",
+      "references": 0
+    }
+  ],
+  "breadcrumbTree": {
+    "name": "ROOT",
+    "children": [
+      {
+        "name": "Engineering",
+        "children": [
+          {
+            "name": "Release Management",
+            "children": [
+              {
+                "name": "LTMi-XT v0.1",
+                "children": [
+                  {
+                    "name": "closing out this week",
+                    "loci": [
+                      "a-b3fe68ab298bd16661c4f8d50adbe1f8"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hiring",
+            "children": [
+              {
+                "name": "Senior Engineers",
+                "children": [
+                  {
+                    "name": "hired against implementation backlog",
+                    "loci": [
+                      "a-3098bacc571536c32b2c3c76d9b2413a"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Compensation",
+            "children": [
+              {
+                "name": "Salary Bands",
+                "children": [
+                  {
+                    "name": "adjusted across all engineering levels",
+                    "loci": [
+                      "a-f9c034eade3d87421332249be33f3681"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Human Resources",
+        "children": [
+          {
+            "name": "Review Cycle",
+            "children": [
+              {
+                "name": "Review Schedule",
+                "children": [
+                  {
+                    "name": "starts Oct 14 runs three weeks",
+                    "loci": [
+                      "a-78c8c283dba574c068aa7eb3ab62c08f"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "children": [
+          {
+            "name": "Campaigns",
+            "children": [
+              {
+                "name": "Lead Leak Scanner",
+                "children": [
+                  {
+                    "name": "launching with three paid placements",
+                    "loci": [
+                      "a-978e398006703ab696bdd8f1653f57c7"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Customer Operations",
+        "children": [
+          {
+            "name": "User Metrics",
+            "children": [
+              {
+                "name": "DiagBuddy Users",
+                "children": [
+                  {
+                    "name": "251 active users",
+                    "loci": [
+                      "a-965b5b65a0eb6ae049a0935d97248d28"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Diagnostics",
+            "children": [
+              {
+                "name": "Diagnoses Logged",
+                "children": [
+                  {
+                    "name": "roughly 3000 logged",
+                    "loci": [
+                      "a-7bec4c5e11f8083e9d2ada27e9c0c799"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Finance",
+        "children": [
+          {
+            "name": "Billing",
+            "children": [
+              {
+                "name": "DiagBuddy Billing",
+                "children": [
+                  {
+                    "name": "live with two pricing tiers",
+                    "loci": [
+                      "a-69c55eb44d270963c387dd1ed35be902"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Cash Runway",
+            "children": [
+              {
+                "name": "Cash On Hand",
+                "children": [
+                  {
+                    "name": "Finance reports cash on hand sufficient for 14 months at current burn.",
+                    "loci": [
+                      "a-c80617c06de2199248a5cf8111d8a6e4"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pricing",
+        "children": [
+          {
+            "name": "Tier Plans",
+            "children": [
+              {
+                "name": "Grandfathered Tier",
+                "children": [
+                  {
+                    "name": "Grandfathered tier at $20 per month is locked for users who signed up before February 15 2026.",
+                    "loci": [
+                      "a-4ef1ef2a1f8dc085d0bd05ff7138d79a"
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Standard Tier",
+                "children": [
+                  {
+                    "name": "The standard tier is $34.99 per month.",
+                    "loci": [
+                      "a-9288092d2d899fddcc80e7d89bf2af6a"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Governance",
+        "children": [
+          {
+            "name": "Board Meetings",
+            "children": [
+              {
+                "name": "Meeting Date",
+                "children": [
+                  {
+                    "name": "The board meeting is scheduled for October 30.",
+                    "loci": [
+                      "a-4794142b84e4f3572f18502aa2a73bf6"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Operations",
+        "children": [
+          {
+            "name": "Task Deadlines",
+            "children": [
+              {
+                "name": "Diagnostic Accuracy Review",
+                "children": [
+                  {
+                    "name": "The customer ops lead must publish the diagnostic accuracy review before October 22.",
+                    "loci": [
+                      "a-687cf2bb2e63de6e0590a9f9a5ba1d51"
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Lead Leak Campaign",
+                "children": [
+                  {
+                    "name": "The marketing director must finalize the lead leak campaign creative by October 18.",
+                    "loci": [
+                      "a-dd21c16f6d8358a748a243a5b2ebbb07"
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "LTMi-XT Benchmark",
+                "children": [
+                  {
+                    "name": "The engineering lead must publish the LTMi-XT benchmark report by October 25.",
+                    "loci": [
+                      "a-91676a360ef372e53f6636a1ebd6e8ea"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "s-bd59055ab265fd82767e0b435b4317cb",
+      "bytes": 1059
+    }
+  ],
+  "artifacts": {
+    "ltmi": "{\"v\":\"ltmi/0.1\",\"kind\":\"manifest\",\"corpus_id\":\"c-ba2b2ee96ddd7a7944d027493bdd52bd\",\"loci\":15,\"lattice\":{\"dim\":64,\"shape\":\"cube\"},\"created\":\"2026-05-08T23:26:04.248Z\",\"sources\":[\"s-bd59055ab265fd82767e0b435b4317cb\"],\"producer\":\"sophiaxt-server/ltmi-xt-0.1\",\"crystallizer_model\":\"q3m:mercury-2\",\"topologizer_model\":\"q3m:mercury-2\"}\n{\"id\":\"a-b3fe68ab298bd16661c4f8d50adbe1f8\",\"breadcrumb\":[\"Engineering\",\"Release Management\",\"LTMi-XT v0.1\",\"closing out this week\"],\"lattice\":[25,25,24],\"statement\":\"Engineering is closing out the LTMi-XT v0.1 release this week.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[35,97]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-3098bacc571536c32b2c3c76d9b2413a\",\"breadcrumb\":[\"Engineering\",\"Hiring\",\"Senior Engineers\",\"hired against implementation backlog\"],\"lattice\":[25,31,46],\"statement\":\"Two senior engineers have been hired against the implementation backlog.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[98,170]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-78c8c283dba574c068aa7eb3ab62c08f\",\"breadcrumb\":[\"Human Resources\",\"Review Cycle\",\"Review Schedule\",\"starts Oct 14 runs three weeks\"],\"lattice\":[10,47,14],\"statement\":\"The HR review cycle starts on October 14 and runs for three weeks.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[171,237]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-f9c034eade3d87421332249be33f3681\",\"breadcrumb\":[\"Engineering\",\"Compensation\",\"Salary Bands\",\"adjusted across all engineering levels\"],\"lattice\":[25,61,23],\"statement\":\"Salary bands are being adjusted across all engineering levels.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[238,300]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-978e398006703ab696bdd8f1653f57c7\",\"breadcrumb\":[\"Marketing\",\"Campaigns\",\"Lead Leak Scanner\",\"launching with three paid placements\"],\"lattice\":[61,11,22],\"statement\":\"Marketing is launching the lead leak scanner campaign with three paid placements.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[301,382]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-965b5b65a0eb6ae049a0935d97248d28\",\"breadcrumb\":[\"Customer Operations\",\"User Metrics\",\"DiagBuddy Users\",\"251 active users\"],\"lattice\":[59,41,23],\"statement\":\"Customer ops reports 251 active DiagBuddy users.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[383,431]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-7bec4c5e11f8083e9d2ada27e9c0c799\",\"breadcrumb\":[\"Customer Operations\",\"Diagnostics\",\"Diagnoses Logged\",\"roughly 3000 logged\"],\"lattice\":[59,25,39],\"statement\":\"Customer ops reports roughly 3000 diagnoses logged in the platform.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[0,67]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-69c55eb44d270963c387dd1ed35be902\",\"breadcrumb\":[\"Finance\",\"Billing\",\"DiagBuddy Billing\",\"live with two pricing tiers\"],\"lattice\":[61,41,56],\"statement\":\"Stripe billing is live for DiagBuddy with two pricing tiers.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[482,542]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-4ef1ef2a1f8dc085d0bd05ff7138d79a\",\"breadcrumb\":[\"Pricing\",\"Tier Plans\",\"Grandfathered Tier\",\"Grandfathered tier at $20 per month is locked for users who signed up before February 15 2026.\"],\"lattice\":[33,36,15],\"statement\":\"The grandfathered tier at $20 per month is locked for users who signed up before February 15 2026.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[543,641]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-9288092d2d899fddcc80e7d89bf2af6a\",\"breadcrumb\":[\"Pricing\",\"Tier Plans\",\"Standard Tier\",\"The standard tier is $34.99 per month.\"],\"lattice\":[33,36,32],\"statement\":\"The standard tier is $34.99 per month.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[642,680]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-c80617c06de2199248a5cf8111d8a6e4\",\"breadcrumb\":[\"Finance\",\"Cash Runway\",\"Cash On Hand\",\"Finance reports cash on hand sufficient for 14 months at current burn.\"],\"lattice\":[61,62,44],\"statement\":\"Finance reports cash on hand sufficient for 14 months at current burn.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[681,751]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-4794142b84e4f3572f18502aa2a73bf6\",\"breadcrumb\":[\"Governance\",\"Board Meetings\",\"Meeting Date\",\"The board meeting is scheduled for October 30.\"],\"lattice\":[29,34,18],\"statement\":\"The board meeting is scheduled for October 30.\",\"kind\":\"fact\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[752,798]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-687cf2bb2e63de6e0590a9f9a5ba1d51\",\"breadcrumb\":[\"Operations\",\"Task Deadlines\",\"Diagnostic Accuracy Review\",\"The customer ops lead must publish the diagnostic accuracy review before October 22.\"],\"lattice\":[45,53,30],\"statement\":\"The customer ops lead must publish the diagnostic accuracy review before October 22.\",\"kind\":\"instruction\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[817,901]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-dd21c16f6d8358a748a243a5b2ebbb07\",\"breadcrumb\":[\"Operations\",\"Task Deadlines\",\"Lead Leak Campaign\",\"The marketing director must finalize the lead leak campaign creative by October 18.\"],\"lattice\":[45,53,63],\"statement\":\"The marketing director must finalize the lead leak campaign creative by October 18.\",\"kind\":\"instruction\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[898,981]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}\n{\"id\":\"a-91676a360ef372e53f6636a1ebd6e8ea\",\"breadcrumb\":[\"Operations\",\"Task Deadlines\",\"LTMi-XT Benchmark\",\"The engineering lead must publish the LTMi-XT benchmark report by October 25.\"],\"lattice\":[45,53,62],\"statement\":\"The engineering lead must publish the LTMi-XT benchmark report by October 25.\",\"kind\":\"instruction\",\"confidence\":1,\"horizon\":\"short\",\"decay\":1,\"source\":{\"id\":\"s-bd59055ab265fd82767e0b435b4317cb\",\"offset\":[982,1059]},\"first_seen\":\"2026-05-08T23:26:04.247Z\",\"last_referenced\":\"2026-05-08T23:26:04.247Z\",\"references\":0}",
+    "trainingJsonl": "{\"instruction\":\"Provide the LTMi-XT v0.1 of Release Management: closing out this week.\",\"input\":\"Topic: Engineering\\nSubtopic: Release Management\\nConcept: LTMi-XT v0.1\",\"output\":\"Engineering is closing out the LTMi-XT v0.1 release this week.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-b3fe68ab298bd16661c4f8d50adbe1f8\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the Senior Engineers of Hiring: hired against implementation backlog.\",\"input\":\"Topic: Engineering\\nSubtopic: Hiring\\nConcept: Senior Engineers\",\"output\":\"Two senior engineers have been hired against the implementation backlog.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-3098bacc571536c32b2c3c76d9b2413a\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the Review Schedule of Review Cycle: starts Oct 14 runs three weeks.\",\"input\":\"Topic: Human Resources\\nSubtopic: Review Cycle\\nConcept: Review Schedule\",\"output\":\"The HR review cycle starts on October 14 and runs for three weeks.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-78c8c283dba574c068aa7eb3ab62c08f\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the Salary Bands of Compensation: adjusted across all engineering levels.\",\"input\":\"Topic: Engineering\\nSubtopic: Compensation\\nConcept: Salary Bands\",\"output\":\"Salary bands are being adjusted across all engineering levels.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-f9c034eade3d87421332249be33f3681\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the Lead Leak Scanner of Campaigns: launching with three paid placements.\",\"input\":\"Topic: Marketing\\nSubtopic: Campaigns\\nConcept: Lead Leak Scanner\",\"output\":\"Marketing is launching the lead leak scanner campaign with three paid placements.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-978e398006703ab696bdd8f1653f57c7\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the DiagBuddy Users of User Metrics: 251 active users.\",\"input\":\"Topic: Customer Operations\\nSubtopic: User Metrics\\nConcept: DiagBuddy Users\",\"output\":\"Customer ops reports 251 active DiagBuddy users.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-965b5b65a0eb6ae049a0935d97248d28\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the Diagnoses Logged of Diagnostics: roughly 3000 logged.\",\"input\":\"Topic: Customer Operations\\nSubtopic: Diagnostics\\nConcept: Diagnoses Logged\",\"output\":\"Customer ops reports roughly 3000 diagnoses logged in the platform.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-7bec4c5e11f8083e9d2ada27e9c0c799\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the DiagBuddy Billing of Billing: live with two pricing tiers.\",\"input\":\"Topic: Finance\\nSubtopic: Billing\\nConcept: DiagBuddy Billing\",\"output\":\"Stripe billing is live for DiagBuddy with two pricing tiers.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-69c55eb44d270963c387dd1ed35be902\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the Grandfathered Tier of Tier Plans: Grandfathered tier at $20 per month is locked for users who signed up before February 15 2026..\",\"input\":\"Topic: Pricing\\nSubtopic: Tier Plans\\nConcept: Grandfathered Tier\",\"output\":\"The grandfathered tier at $20 per month is locked for users who signed up before February 15 2026.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-4ef1ef2a1f8dc085d0bd05ff7138d79a\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the Standard Tier of Tier Plans: The standard tier is $34.99 per month..\",\"input\":\"Topic: Pricing\\nSubtopic: Tier Plans\\nConcept: Standard Tier\",\"output\":\"The standard tier is $34.99 per month.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-9288092d2d899fddcc80e7d89bf2af6a\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the Cash On Hand of Cash Runway: Finance reports cash on hand sufficient for 14 months at current burn..\",\"input\":\"Topic: Finance\\nSubtopic: Cash Runway\\nConcept: Cash On Hand\",\"output\":\"Finance reports cash on hand sufficient for 14 months at current burn.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-c80617c06de2199248a5cf8111d8a6e4\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the Meeting Date of Board Meetings: The board meeting is scheduled for October 30..\",\"input\":\"Topic: Governance\\nSubtopic: Board Meetings\\nConcept: Meeting Date\",\"output\":\"The board meeting is scheduled for October 30.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"fact\"},\"meta\":{\"locus_id\":\"a-4794142b84e4f3572f18502aa2a73bf6\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the Diagnostic Accuracy Review of Task Deadlines: The customer ops lead must publish the diagnostic accuracy review before October 22..\",\"input\":\"Topic: Operations\\nSubtopic: Task Deadlines\\nConcept: Diagnostic Accuracy Review\",\"output\":\"The customer ops lead must publish the diagnostic accuracy review before October 22.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"instruction\"},\"meta\":{\"locus_id\":\"a-687cf2bb2e63de6e0590a9f9a5ba1d51\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the Lead Leak Campaign of Task Deadlines: The marketing director must finalize the lead leak campaign creative by October 18..\",\"input\":\"Topic: Operations\\nSubtopic: Task Deadlines\\nConcept: Lead Leak Campaign\",\"output\":\"The marketing director must finalize the lead leak campaign creative by October 18.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"instruction\"},\"meta\":{\"locus_id\":\"a-dd21c16f6d8358a748a243a5b2ebbb07\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}\n{\"instruction\":\"Provide the LTMi-XT Benchmark of Task Deadlines: The engineering lead must publish the LTMi-XT benchmark report by October 25..\",\"input\":\"Topic: Operations\\nSubtopic: Task Deadlines\\nConcept: LTMi-XT Benchmark\",\"output\":\"The engineering lead must publish the LTMi-XT benchmark report by October 25.\",\"weight\":1,\"tags\":{\"horizon\":\"short\",\"kind\":\"instruction\"},\"meta\":{\"locus_id\":\"a-91676a360ef372e53f6636a1ebd6e8ea\",\"source_id\":\"s-bd59055ab265fd82767e0b435b4317cb\"}}"
+  }
+}
