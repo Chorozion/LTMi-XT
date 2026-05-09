@@ -1,0 +1,311 @@
+{
+  "compared_at": "2026-05-09T00:43:47Z",
+  "methods": [
+    "LTMi-XT",
+    "BM25",
+    "keyword-overlap"
+  ],
+  "scoreboard": {
+    "LTMi-XT": {
+      "hit_at_1": 12,
+      "hit_at_1_pct": 80.0,
+      "hit_at_3": 12,
+      "hit_at_3_pct": 80.0,
+      "miss": 2,
+      "n": 15,
+      "avg_ms": 1202.73
+    },
+    "BM25": {
+      "hit_at_1": 9,
+      "hit_at_1_pct": 60.0,
+      "hit_at_3": 10,
+      "hit_at_3_pct": 66.7,
+      "miss": 5,
+      "n": 15,
+      "avg_ms": 0.05
+    },
+    "keyword-overlap": {
+      "hit_at_1": 9,
+      "hit_at_1_pct": 60.0,
+      "hit_at_3": 10,
+      "hit_at_3_pct": 66.7,
+      "miss": 4,
+      "n": 15,
+      "avg_ms": 0.18
+    }
+  },
+  "per_query": [
+    {
+      "corpus": "C1",
+      "query": "What is the failure mode in the standard cold storage workflow?",
+      "expected": [
+        "coolant",
+        "mismatch",
+        "shipments"
+      ],
+      "ltmi_hit": 6,
+      "ltmi_ms": 1095,
+      "ltmi_top1": "The standard workflow includes a customer calling in, dispatch logging the pickup, the driver collecting, the technician verifying temperature on arrival, the business delivering, and the customer signing for it.",
+      "bm25_hit": null,
+      "bm25_ms": 0.2,
+      "bm25_top1": "The Cold Storage line is the high-margin part of the business.",
+      "kw_hit": 6,
+      "kw_ms": 0.22,
+      "kw_top1": "The Cold Storage line is the high-margin part of the business."
+    },
+    {
+      "corpus": "C1",
+      "query": "What insulation should be used for dry ice loads?",
+      "expected": [
+        "VIP",
+        "panel",
+        "inserts"
+      ],
+      "ltmi_hit": 1,
+      "ltmi_ms": 1196,
+      "ltmi_top1": "For dry ice loads, the business always uses the VIP panel inserts.",
+      "bm25_hit": 1,
+      "bm25_ms": 0.05,
+      "bm25_top1": "For dry ice loads we always use the VIP panel inserts.",
+      "kw_hit": 1,
+      "kw_ms": 0.28,
+      "kw_top1": "For dry ice loads we always use the VIP panel inserts."
+    },
+    {
+      "corpus": "C1",
+      "query": "What is the safe transit time for gel pack loads?",
+      "expected": [
+        "18",
+        "hours",
+        "gel"
+      ],
+      "ltmi_hit": 1,
+      "ltmi_ms": 987,
+      "ltmi_top1": "Gel pack loads are cheaper but are only safe for transit times under 18 hours.",
+      "bm25_hit": 1,
+      "bm25_ms": 0.04,
+      "bm25_top1": "Gel pack loads are cheaper but only safe for transit times under 18 hours.",
+      "kw_hit": 1,
+      "kw_ms": 0.14,
+      "kw_top1": "Gel pack loads are cheaper but only safe for transit times under 18 hours."
+    },
+    {
+      "corpus": "C1",
+      "query": "How many trucks does the cold storage line operate?",
+      "expected": [
+        "three",
+        "trucks",
+        "metro"
+      ],
+      "ltmi_hit": 1,
+      "ltmi_ms": 1285,
+      "ltmi_top1": "The business currently operates three trucks across the metro area.",
+      "bm25_hit": 2,
+      "bm25_ms": 0.04,
+      "bm25_top1": "The Cold Storage line is the high-margin part of the business.",
+      "kw_hit": 2,
+      "kw_ms": 0.12,
+      "kw_top1": "The Cold Storage line is the high-margin part of the business."
+    },
+    {
+      "corpus": "C1",
+      "query": "What tool can model lane viability in advance?",
+      "expected": [
+        "Sophia Key 3M",
+        "lane",
+        "configuration"
+      ],
+      "ltmi_hit": 1,
+      "ltmi_ms": 1234,
+      "ltmi_top1": "The Sophia Key 3M tool can model a lane and tell the business in advance which configuration will hold.",
+      "bm25_hit": 1,
+      "bm25_ms": 0.02,
+      "bm25_top1": "The Sophia Key 3M tool can model a lane and tell us in advance which configuration will hold.",
+      "kw_hit": 1,
+      "kw_ms": 0.09,
+      "kw_top1": "The Sophia Key 3M tool can model a lane and tell us in advance which configuration will hold."
+    },
+    {
+      "corpus": "C2",
+      "query": "What is the hidden size of Cassandra T1?",
+      "expected": [
+        "2048",
+        "hidden",
+        "size"
+      ],
+      "ltmi_hit": 1,
+      "ltmi_ms": 1264,
+      "ltmi_top1": "The Cassandra T1 model is a 28-layer transformer with a hidden size of 2048.",
+      "bm25_hit": 1,
+      "bm25_ms": 0.03,
+      "bm25_top1": "The Cassandra T1 model is a 28-layer transformer with a hidden size of 2048.",
+      "kw_hit": 1,
+      "kw_ms": 0.13,
+      "kw_top1": "The Cassandra T1 model is a 28-layer transformer with a hidden size of 2048."
+    },
+    {
+      "corpus": "C2",
+      "query": "What was the training loss at epoch 5?",
+      "expected": [
+        "2.2561",
+        "epoch",
+        "loss"
+      ],
+      "ltmi_hit": 1,
+      "ltmi_ms": 1362,
+      "ltmi_top1": "Training of the Cassandra T1 model reached a final loss of 2.2561 at epoch 5.",
+      "bm25_hit": 1,
+      "bm25_ms": 0.03,
+      "bm25_top1": "Training reached a final loss of 2.2561 at epoch 5.",
+      "kw_hit": 1,
+      "kw_ms": 0.18,
+      "kw_top1": "Training reached a final loss of 2.2561 at epoch 5."
+    },
+    {
+      "corpus": "C2",
+      "query": "How many query and KV heads does the model use?",
+      "expected": [
+        "16",
+        "query",
+        "4",
+        "KV",
+        "heads"
+      ],
+      "ltmi_hit": null,
+      "ltmi_ms": 1253,
+      "ltmi_top1": "The Cassandra T1 model uses grouped-query attention with 16 query heads and 4 key-value heads.",
+      "bm25_hit": null,
+      "bm25_ms": 0.04,
+      "bm25_top1": "It uses grouped-query attention with 16 query heads and 4 key-value heads.",
+      "kw_hit": null,
+      "kw_ms": 0.15,
+      "kw_top1": "It uses grouped-query attention with 16 query heads and 4 key-value heads."
+    },
+    {
+      "corpus": "C2",
+      "query": "What position encoding does the model use?",
+      "expected": [
+        "RoPE",
+        "position"
+      ],
+      "ltmi_hit": 1,
+      "ltmi_ms": 1300,
+      "ltmi_top1": "The Cassandra T1 model uses RoPE for position encoding.",
+      "bm25_hit": 1,
+      "bm25_ms": 0.02,
+      "bm25_top1": "Position encoding is RoPE.",
+      "kw_hit": 1,
+      "kw_ms": 0.12,
+      "kw_top1": "Position encoding is RoPE."
+    },
+    {
+      "corpus": "C2",
+      "query": "What license is the Cassandra T1 repo released under?",
+      "expected": [
+        "Apache",
+        "2.0",
+        "license"
+      ],
+      "ltmi_hit": 1,
+      "ltmi_ms": 1024,
+      "ltmi_top1": "The repository for the Cassandra T1 model is licensed Apache 2.0.",
+      "bm25_hit": null,
+      "bm25_ms": 0.02,
+      "bm25_top1": "The Cassandra T1 model is a 28-layer transformer with a hidden size of 2048.",
+      "kw_hit": null,
+      "kw_ms": 0.12,
+      "kw_top1": "The Cassandra T1 model is a 28-layer transformer with a hidden size of 2048."
+    },
+    {
+      "corpus": "C3",
+      "query": "What are the two DiagBuddy pricing tiers?",
+      "expected": [
+        "$20",
+        "$34.99",
+        "tier"
+      ],
+      "ltmi_hit": null,
+      "ltmi_ms": 1413,
+      "ltmi_top1": "Stripe billing is live for DiagBuddy with two pricing tiers.",
+      "bm25_hit": null,
+      "bm25_ms": 0.03,
+      "bm25_top1": "Stripe billing is live for DiagBuddy with two pricing tiers.",
+      "kw_hit": null,
+      "kw_ms": 0.24,
+      "kw_top1": "Stripe billing is live for DiagBuddy with two pricing tiers."
+    },
+    {
+      "corpus": "C3",
+      "query": "When is the HR review cycle starting?",
+      "expected": [
+        "October",
+        "14",
+        "HR"
+      ],
+      "ltmi_hit": 1,
+      "ltmi_ms": 1103,
+      "ltmi_top1": "The HR review cycle starts on October 14 and runs for three weeks.",
+      "bm25_hit": 1,
+      "bm25_ms": 0.04,
+      "bm25_top1": "The HR review cycle starts on October 14 and runs for three weeks.",
+      "kw_hit": 1,
+      "kw_ms": 0.23,
+      "kw_top1": "The HR review cycle starts on October 14 and runs for three weeks."
+    },
+    {
+      "corpus": "C3",
+      "query": "How many DiagBuddy users are active?",
+      "expected": [
+        "251",
+        "active",
+        "users"
+      ],
+      "ltmi_hit": 1,
+      "ltmi_ms": 1228,
+      "ltmi_top1": "Customer ops reports 251 active DiagBuddy users.",
+      "bm25_hit": 1,
+      "bm25_ms": 0.04,
+      "bm25_top1": "Customer ops reports 251 active DiagBuddy users and roughly 3000 diagnoses logged in the platform.",
+      "kw_hit": 1,
+      "kw_ms": 0.31,
+      "kw_top1": "Customer ops reports 251 active DiagBuddy users and roughly 3000 diagnoses logged in the platform."
+    },
+    {
+      "corpus": "C3",
+      "query": "What is the engineering lead's deadline?",
+      "expected": [
+        "October",
+        "25",
+        "benchmark",
+        "engineering"
+      ],
+      "ltmi_hit": 1,
+      "ltmi_ms": 1196,
+      "ltmi_top1": "The engineering lead must publish the LTMi-XT benchmark report by October 25.",
+      "bm25_hit": 1,
+      "bm25_ms": 0.06,
+      "bm25_top1": "The engineering lead must publish the LTMi-XT benchmark report by October 25.",
+      "kw_hit": 1,
+      "kw_ms": 0.23,
+      "kw_top1": "The engineering lead must publish the LTMi-XT benchmark report by October 25."
+    },
+    {
+      "corpus": "C3",
+      "query": "How long is finance's runway estimate?",
+      "expected": [
+        "14",
+        "months",
+        "runway"
+      ],
+      "ltmi_hit": 1,
+      "ltmi_ms": 1101,
+      "ltmi_top1": "Finance reports cash on hand sufficient for 14 months at current burn.",
+      "bm25_hit": null,
+      "bm25_ms": 0.03,
+      "bm25_top1": "Finance reports cash on hand sufficient for 14 months at current burn.",
+      "kw_hit": null,
+      "kw_ms": 0.21,
+      "kw_top1": "Finance reports cash on hand sufficient for 14 months at current burn."
+    }
+  ]
+}

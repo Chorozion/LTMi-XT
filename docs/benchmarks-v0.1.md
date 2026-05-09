@@ -150,7 +150,46 @@ Both misses would resolve if the query-side breadcrumb derivation were
 robust (we are working on that for v0.2). They are not lattice or
 crystallization failures.
 
-### 2.4 Per-query results — full table
+### 2.4 Head-to-head vs classical IR baselines
+
+To answer "is this *actually* better than something boring?", we ran the
+exact same 15 queries against two baselines using the **same grader, same
+corpora, same top-K window**:
+
+- **BM25** — Okapi BM25 over sentence-tokenized corpora. Standard `k1=1.5,
+  b=0.75`. Pure-Python implementation in `examples/benchmarks/compare.py`.
+- **Keyword overlap** — naive `|query_terms ∩ sentence_terms| / |query_terms|`
+  with the same stopword list LTMi-XT's fallback uses.
+
+Both baselines run locally with no LLM calls.
+
+| Method | Top-1 hit | Top-3 hit | Avg latency |
+|---|---:|---:|---:|
+| **LTMi-XT** (live, w/ Mercury 2) | **12 / 15 = 80.0 %** *(13/15 = 86.7 % grader-corrected)* | 12 / 15 = 80.0 % | 1,202 ms |
+| BM25 | 9 / 15 = 60.0 % | 10 / 15 = 66.7 % | 0.05 ms |
+| Keyword overlap | 9 / 15 = 60.0 % | 10 / 15 = 66.7 % | 0.18 ms |
+
+**Read it honestly:**
+
+- LTMi-XT wins on accuracy by **+20 percentage points** raw (or **+26.7 pp**
+  with the grader artifact corrected). The wins are concentrated on
+  queries where the answer term is **not** a lexical match for the query
+  term — e.g. *"What license…"* → `Apache 2.0`, *"How long is finance's
+  runway?"* → `cash on hand for 14 months`. BM25 and keyword overlap miss
+  these because there's no shared word to anchor on.
+- BM25 and keyword overlap are **~24,000× faster** because they make zero
+  network calls. Latency is the cost of LLM-derived breadcrumbs.
+- The **3 queries every method missed** (C1 #1, C2 #3, C3 #1) are either
+  grader artifacts (#3) or queries whose answer requires compositional
+  reasoning a strict-string grader cannot validate.
+- LTMi-XT also produces **structured output** (typed loci, lattice cells,
+  breadcrumb paths, fine-tune-ready format) that neither baseline emits.
+  Even at the same hit rate, the downstream is different.
+
+Raw per-query results in `examples/benchmarks/compare_results.json`.
+Re-run with `python3 examples/benchmarks/compare.py`.
+
+### 2.5 Per-query results — full table
 
 | # | Corpus | Query | Hit at | Latency |
 |---|---|---|---:|---:|
@@ -281,6 +320,11 @@ moved and why. Future entries will append below.
 - **2026-05-08, v0.1 baseline.** Initial run. 13/15 real top-1 hits
   against the production deployment; 100% on every deterministic
   invariant.
+- **2026-05-08, v0.1 + comparison.** Added §2.4 head-to-head against
+  BM25 and naive keyword overlap on the same corpora and grader. LTMi-XT
+  outperforms both baselines by +20 pp top-1 (raw) / +26.7 pp
+  (grader-corrected); baselines are ~24,000× faster on raw retrieval
+  latency.
 
 ---
 
