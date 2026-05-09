@@ -1,0 +1,96 @@
+{
+  "model": "mercury-2",
+  "corpora_count": 5,
+  "results": [
+    {
+      "id": "ops",
+      "chars": 284,
+      "elapsed_ms": 1450,
+      "usage": {
+        "prompt_tokens": 129,
+        "reasoning_tokens": 473,
+        "completion_tokens": 193,
+        "total_tokens": 795,
+        "cached_input_tokens": 4
+      },
+      "locus_count": 5,
+      "raw_lines": 5,
+      "parse_rate": 1,
+      "content": "{\"breadcrumb\": [\"Customer Support\", \"Scheduling\", \"On Call\", \"Hours\"], \"statement\": \"The customer support team is on call from 9am to 6pm Eastern.\", \"kind\": \"fact\"}  \n{\"breadcrumb\": [\"Customer Support\", \"Ticket Handling\", \"Acknowledgment\", \"Latency\"], \"statement\": \"Tickets must be acknowledged within 2 hours.\", \"kind\": \"fact\"}  \n{\"breadcrumb\": [\"Engineering\", \"Escalation\", \"Critical Bugs\", \"Response Time\"], \"statement\": \"Critical bugs escalate to engineering on-call within 30 minutes via PagerDuty.\", \"kind\": \"fact\"}  \n{\"breadcrumb\": [\"Customer Support\", \"Billing\", \"Contact\", \"Email\"], \"statement\": \"Customer billing questions go to finance@sophiaxt.com.\", \"kind\": \"fact\"}  \n{\"breadcrumb\": [\"Finance\", \"Refunds\", \"Approval\", \"Threshold\"], \"statement\": \"Refunds over $500 require manager approval.\", \"kind\": \"fact\"}"
+    },
+    {
+      "id": "tech",
+      "chars": 388,
+      "elapsed_ms": 1451,
+      "usage": {
+        "prompt_tokens": 160,
+        "reasoning_tokens": 834,
+        "completion_tokens": 438,
+        "total_tokens": 1432,
+        "cached_input_tokens": 4
+      },
+      "locus_count": 14,
+      "raw_lines": 14,
+      "parse_rate": 1,
+      "content": "{\"breadcrumb\":[\"Cassandra T1 model\",\"architecture\",\"layers\",\"count\"],\"statement\":\"The Cassandra T1 model has 28 transformer layers.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"architecture\",\"hidden size\",\"value\"],\"statement\":\"The hidden size of the Cassandra T1 model is 2048.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"vocabulary\",\"size\",\"value\"],\"statement\":\"The vocabulary size of the Cassandra T1 model is 32000.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"attention\",\"type\",\"value\"],\"statement\":\"The model uses grouped-query attention.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"attention\",\"query heads\",\"count\"],\"statement\":\"The model has 16 query heads.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"attention\",\"key-value heads\",\"count\"],\"statement\":\"The model has 4 key-value heads.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"position encoding\",\"type\",\"value\"],\"statement\":\"The model uses RoPE position encoding.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"position encoding\",\"theta\",\"value\"],\"statement\":\"The RoPE theta value is 500000.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"normalization\",\"type\",\"value\"],\"statement\":\"The model uses RMSNorm normalization.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"normalization\",\"epsilon\",\"value\"],\"statement\":\"RMSNorm epsilon is 1e-6.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"FFN\",\"intermediate size\",\"value\"],\"statement\":\"The intermediate FFN size is 5632.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"FFN\",\"activation\",\"type\"],\"statement\":\"The activation function is SwiGLU.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"training\",\"method\",\"value\"],\"statement\":\"The model trains using masked diffusion.\",\"kind\":\"fact\"}\n{\"breadcrumb\":[\"Cassandra T1 model\",\"training\",\"span masking probability\",\"value\"],\"statement\":\"The span masking probability is 0.15.\",\"kind\":\"fact\"}"
+    },
+    {
+      "id": "biz",
+      "chars": 332,
+      "elapsed_ms": 1237,
+      "usage": {
+        "prompt_tokens": 154,
+        "reasoning_tokens": 813,
+        "completion_tokens": 354,
+        "total_tokens": 1321,
+        "cached_input_tokens": 5
+      },
+      "locus_count": 9,
+      "raw_lines": 9,
+      "parse_rate": 1,
+      "content": "{\"breadcrumb\": [\"Financials\", \"Revenue\", \"Growth\", \"Q4 revenue increase\"], \"statement\": \"Q4 revenue grew 18% year-over-year to $42 million.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Financials\", \"Revenue\", \"Driver\", \"Enterprise expansion\"], \"statement\": \"Enterprise expansion in healthcare and financial services drove the Q4 revenue growth.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Financials\", \"Gross margin\", \"Stability\", \"Margin level\"], \"statement\": \"Gross margin remained stable at 76%.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Human Resources\", \"Sales\", \"Hiring\", \"New hires\"], \"statement\": \"Sales hired 12 representatives in Q4.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Human Resources\", \"Sales\", \"Headcount\", \"Total headcount\"], \"statement\": \"Total headcount after hiring was 240.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Product\", \"New product line\", \"Revenue\", \"First quarter revenue\"], \"statement\": \"The new product line generated $3.2 million in its first quarter.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Product\", \"New product line\", \"Revenue\", \"Target comparison\"], \"statement\": \"The $3.2 million revenue exceeded the $2 million target.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Customer\", \"NPS\", \"Score\", \"Current quarter\"], \"statement\": \"Customer Net Promoter Score scored 67.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Customer\", \"NPS\", \"Change\", \"Quarterly increase\"], \"statement\": \"Customer Net Promoter Score increased from 62 in the previous quarter to 67.\", \"kind\": \"fact\"}"
+    },
+    {
+      "id": "med",
+      "chars": 345,
+      "elapsed_ms": 1070,
+      "usage": {
+        "prompt_tokens": 141,
+        "reasoning_tokens": 577,
+        "completion_tokens": 304,
+        "total_tokens": 1022,
+        "cached_input_tokens": 65
+      },
+      "locus_count": 5,
+      "raw_lines": 5,
+      "parse_rate": 1,
+      "content": "{\"breadcrumb\": [\"Heparin-induced thrombocytopenia\", \"definition\", \"nature\", \"immune-mediated adverse drug reaction\"], \"statement\": \"Heparin-induced thrombocytopenia is a serious immune-mediated adverse drug reaction.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Heparin-induced thrombocytopenia\", \"clinical course\", \"onset timing\", \"5-10 days after initial heparin exposure\"], \"statement\": \"Heparin-induced thrombocytopenia typically develops 5-10 days after initial heparin exposure.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Heparin-induced thrombocytopenia\", \"diagnosis\", \"criteria\", \"requires 4Ts score and confirmatory antibody testing\"], \"statement\": \"Diagnosis of heparin-induced thrombocytopenia requires the 4Ts score and confirmatory antibody testing.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Heparin-induced thrombocytopenia\", \"treatment\", \"first-line alternatives\", \"argatroban or fondaparinux\"], \"statement\": \"Argatroban or fondaparinux are first-line alternatives for heparin-induced thrombocytopenia.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Heparin-induced thrombocytopenia\", \"management\", \"platelet transfusion\", \"contraindicated unless severe bleeding occurs\"], \"statement\": \"Platelet transfusions are contraindicated in heparin-induced thrombocytopenia unless severe bleeding occurs.\", \"kind\": \"fact\"}"
+    },
+    {
+      "id": "law",
+      "chars": 352,
+      "elapsed_ms": 847,
+      "usage": {
+        "prompt_tokens": 143,
+        "reasoning_tokens": 457,
+        "completion_tokens": 222,
+        "total_tokens": 822,
+        "cached_input_tokens": 6
+      },
+      "locus_count": 5,
+      "raw_lines": 5,
+      "parse_rate": 1,
+      "content": "{\"breadcrumb\": [\"Contract\", \"Section 4.2\", \"Termination\", \"Written notice requirement\"], \"statement\": \"Contract Section 4.2 requires written notice 30 days prior to termination.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Contract\", \"Payments\", \"Late fees\", \"Accrual rate\"], \"statement\": \"Late payment fees accrue at 1.5% per month after a 10-day grace period.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Contract\", \"Liability\", \"Cap\", \"Maximum liability\"], \"statement\": \"Liability is capped at fees paid in the preceding 12 months.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Contract\", \"Dispute resolution\", \"Arbitration\", \"Binding arbitration under AAA rules\"], \"statement\": \"Either party may invoke binding arbitration under AAA rules with venue in Delaware.\", \"kind\": \"fact\"}\n{\"breadcrumb\": [\"Contract\", \"Confidentiality\", \"Survival\", \"Obligation duration after termination\"], \"statement\": \"Confidentiality obligations survive termination for 5 years.\", \"kind\": \"fact\"}"
+    }
+  ],
+  "totals": {
+    "prompt_tokens": 727,
+    "reasoning_tokens": 3154,
+    "completion_tokens": 1511,
+    "total_tokens": 5392,
+    "avg_latency_ms": 1211,
+    "total_loci": 38,
+    "tok_per_sec": 250,
+    "parse_rate": 1
+  }
+}
