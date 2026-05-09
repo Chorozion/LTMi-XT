@@ -1,0 +1,49 @@
+{
+  "model": "mercury-2",
+  "ran_at": "2026-05-09T15:26:50.227Z",
+  "total_calls": 45,
+  "modes": {
+    "A_baseline": {
+      "n": 15,
+      "strict_hits": 0,
+      "strict_pct": 0,
+      "lenient_hits": 0,
+      "lenient_pct": 0,
+      "avg_prompt_chars": 55,
+      "total_prompt_tokens": 795,
+      "total_reasoning_tokens": 1083,
+      "total_completion_tokens": 240,
+      "total_tokens": 2118,
+      "avg_tokens_per_call": 141,
+      "avg_latency_ms": 342
+    },
+    "B_raw_rag": {
+      "n": 15,
+      "strict_hits": 10,
+      "strict_pct": 66.7,
+      "lenient_hits": 10,
+      "lenient_pct": 66.7,
+      "avg_prompt_chars": 895,
+      "total_prompt_tokens": 3554,
+      "total_reasoning_tokens": 913,
+      "total_completion_tokens": 259,
+      "total_tokens": 4726,
+      "avg_tokens_per_call": 315,
+      "avg_latency_ms": 291
+    },
+    "C_ltmi_xt": {
+      "n": 15,
+      "strict_hits": 10,
+      "strict_pct": 66.7,
+      "lenient_hits": 11,
+      "lenient_pct": 73.3,
+      "avg_prompt_chars": 1206,
+      "total_prompt_tokens": 4666,
+      "total_reasoning_tokens": 851,
+      "total_completion_tokens": 265,
+      "total_tokens": 5782,
+      "avg_tokens_per_call": 385,
+      "avg_latency_ms": 274
+    }
+  }
+}
