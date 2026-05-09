@@ -1,0 +1,72 @@
+{
+  "model": "microsoft/Phi-3-mini-4k-instruct",
+  "n_queries": 15,
+  "n_loci_pool": 48,
+  "mode_A": {
+    "strict": 1,
+    "lenient": 1,
+    "avg_ms": 7131.066666666667
+  },
+  "matrix": {
+    "3/relevance": {
+      "strict": 10,
+      "lenient": 10,
+      "avg_ms": 1911.1333333333334
+    },
+    "3/chrono": {
+      "strict": 10,
+      "lenient": 10,
+      "avg_ms": 2016.3333333333333
+    },
+    "3/topo": {
+      "strict": 10,
+      "lenient": 10,
+      "avg_ms": 1911.9333333333334
+    },
+    "10/relevance": {
+      "strict": 9,
+      "lenient": 9,
+      "avg_ms": 2132.2
+    },
+    "10/chrono": {
+      "strict": 12,
+      "lenient": 12,
+      "avg_ms": 2545.866666666667
+    },
+    "10/topo": {
+      "strict": 11,
+      "lenient": 11,
+      "avg_ms": 2191.4666666666667
+    },
+    "30/relevance": {
+      "strict": 11,
+      "lenient": 11,
+      "avg_ms": 2653.2
+    },
+    "30/chrono": {
+      "strict": 10,
+      "lenient": 10,
+      "avg_ms": 2585.5333333333333
+    },
+    "30/topo": {
+      "strict": 10,
+      "lenient": 10,
+      "avg_ms": 2507.0666666666666
+    },
+    "ALL/relevance": {
+      "strict": 9,
+      "lenient": 9,
+      "avg_ms": 3585.2
+    },
+    "ALL/chrono": {
+      "strict": 9,
+      "lenient": 9,
+      "avg_ms": 3437.4666666666667
+    },
+    "ALL/topo": {
+      "strict": 9,
+      "lenient": 9,
+      "avg_ms": 3939.266666666667
+    }
+  }
+}

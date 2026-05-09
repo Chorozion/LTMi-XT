@@ -1,0 +1,72 @@
+{
+  "model": "Gemma-4-E2B-Uncensored-HauhauCS-Aggressive-Q6_K_P.gguf",
+  "n_queries": 15,
+  "n_loci_pool": 48,
+  "mode_A": {
+    "strict": 1,
+    "lenient": 1,
+    "avg_ms": 20970.466666666667
+  },
+  "matrix": {
+    "3/relevance": {
+      "strict": 9,
+      "lenient": 9,
+      "avg_ms": 23957.266666666666
+    },
+    "3/chrono": {
+      "strict": 9,
+      "lenient": 9,
+      "avg_ms": 22902.466666666667
+    },
+    "3/topo": {
+      "strict": 10,
+      "lenient": 10,
+      "avg_ms": 24290.866666666665
+    },
+    "10/relevance": {
+      "strict": 11,
+      "lenient": 11,
+      "avg_ms": 43271.53333333333
+    },
+    "10/chrono": {
+      "strict": 11,
+      "lenient": 11,
+      "avg_ms": 27067.333333333332
+    },
+    "10/topo": {
+      "strict": 12,
+      "lenient": 12,
+      "avg_ms": 26671.733333333334
+    },
+    "30/relevance": {
+      "strict": 13,
+      "lenient": 13,
+      "avg_ms": 87278.06666666667
+    },
+    "30/chrono": {
+      "strict": 13,
+      "lenient": 13,
+      "avg_ms": 70556.86666666667
+    },
+    "30/topo": {
+      "strict": 12,
+      "lenient": 12,
+      "avg_ms": 59553.86666666667
+    },
+    "ALL/relevance": {
+      "strict": 12,
+      "lenient": 12,
+      "avg_ms": 140269.53333333333
+    },
+    "ALL/chrono": {
+      "strict": 12,
+      "lenient": 12,
+      "avg_ms": 95471.13333333333
+    },
+    "ALL/topo": {
+      "strict": 11,
+      "lenient": 11,
+      "avg_ms": 17735.6
+    }
+  }
+}

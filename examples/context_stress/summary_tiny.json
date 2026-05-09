@@ -1,0 +1,72 @@
+{
+  "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "n_queries": 15,
+  "n_loci_pool": 48,
+  "mode_A": {
+    "strict": 1,
+    "lenient": 1,
+    "avg_ms": 5625.6
+  },
+  "matrix": {
+    "3/relevance": {
+      "strict": 12,
+      "lenient": 12,
+      "avg_ms": 3693.2
+    },
+    "3/chrono": {
+      "strict": 11,
+      "lenient": 11,
+      "avg_ms": 3416.133333333333
+    },
+    "3/topo": {
+      "strict": 11,
+      "lenient": 11,
+      "avg_ms": 3642.3333333333335
+    },
+    "10/relevance": {
+      "strict": 10,
+      "lenient": 10,
+      "avg_ms": 1838.8
+    },
+    "10/chrono": {
+      "strict": 11,
+      "lenient": 11,
+      "avg_ms": 2049.6
+    },
+    "10/topo": {
+      "strict": 12,
+      "lenient": 12,
+      "avg_ms": 1993.6
+    },
+    "30/relevance": {
+      "strict": 8,
+      "lenient": 8,
+      "avg_ms": 2805.266666666667
+    },
+    "30/chrono": {
+      "strict": 9,
+      "lenient": 9,
+      "avg_ms": 2491.733333333333
+    },
+    "30/topo": {
+      "strict": 11,
+      "lenient": 11,
+      "avg_ms": 2719.5333333333333
+    },
+    "ALL/relevance": {
+      "strict": 0,
+      "lenient": 0,
+      "avg_ms": 3214.8
+    },
+    "ALL/chrono": {
+      "strict": 0,
+      "lenient": 0,
+      "avg_ms": 3068.5333333333333
+    },
+    "ALL/topo": {
+      "strict": 0,
+      "lenient": 0,
+      "avg_ms": 10435.866666666667
+    }
+  }
+}
