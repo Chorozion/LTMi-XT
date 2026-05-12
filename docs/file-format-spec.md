@@ -1,9 +1,47 @@
-# LTMi-XT File Format Specification (v0.1)
+# LTMi-XT File Format Specification (v0.3.1)
 
 **Status:** Draft, open
-**Last updated:** 2026-05-08
+**Last updated:** 2026-05-12 (v0.3.1 amendments); 2026-05-08 (v0.1 base)
 **Editor:** Thomas Garren · SOPHIA XT LLC
 **License:** Apache 2.0
+**Empirical addendum:** [`empirical-findings-2026-05-12.md`](./empirical-findings-2026-05-12.md)
+
+---
+
+## 0 — v0.3.1 Amendment Summary (read first)
+
+The file format itself is unchanged from v0.1. **What changed is the
+semantic interpretation of the `lattice` field**:
+
+- **v0.1 framed lattice as a model-conditioning signal.**
+- **v0.3.1 reframes lattice as a per-locus deterministic identifier.**
+
+Three-way ablation (BLAKE2b / PCA-3D / uniform-random per-locus, 2026-05-12)
+showed statistically indistinguishable downstream behavior across all coord
+schemes in our reference Cassandra T2 implementation, with unforced
+inference byte-identical between random and BLAKE2b arms. See
+`empirical-findings-2026-05-12.md` for the full results, Mercury 2
+adversarial review, and the v0.4 pre-registered remediation plan.
+
+**Practical implications for implementations:**
+
+1. BLAKE2b (§5.2) remains the recommended default coord derivation.
+2. PCA-3D is documented as an optional alternative for visualization /
+   topic-clustering use cases; it does NOT improve downstream perplexity.
+3. Random per-locus is also a valid coord scheme.
+4. The `lattice` field continues to be REQUIRED on every locus for
+   format compatibility, but its role is now Role B (conditioning tag /
+   deterministic ID) only — Role A (retrieval primitive) was deprecated
+   in v0.2 in favor of TF-IDF cosine.
+5. Future v0.4 may deprecate the `attention_use_ltmi_priors` reference-
+   implementation interface unless one of six pre-registered LoRA
+   variants (V1-V6) demonstrates a CI-significant improvement at n≥172.
+
+The rest of this document (§1 onward) is preserved from v0.1 with the
+understanding that any claim of "the lattice acts as a model-conditioning
+signal" should be read as "the lattice is a deterministic per-locus tag
+that future architectures may learn to use, but the v0.1 reference
+implementation does not exploit it."
 
 ---
 

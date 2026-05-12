@@ -1,8 +1,28 @@
-// Hash-derived lattice coordinate. See paper §5.2.
+// Hash-derived lattice coordinate. See paper §5.2 + docs/empirical-findings-2026-05-12.md.
 //
 // We hash each cumulative breadcrumb prefix and combine to produce a
 // (x, y, z) ∈ [0, 63]³ such that loci sharing the first three breadcrumb
 // levels land at the same cell.
+//
+// EMPIRICAL STATUS (v0.3.1, 2026-05-12)
+// -------------------------------------
+// The lattice coordinate is a per-locus DETERMINISTIC IDENTIFIER. In our
+// reference Cassandra T2 implementation it is NOT a semantic conditioning
+// signal — three-way ablation (BLAKE2b vs PCA-3D vs uniform-random per
+// locus) showed statistically indistinguishable downstream behavior, with
+// unforced inference byte-identical between the random and BLAKE2b arms.
+//
+// Recommended uses for this coordinate:
+//   1. Spatial clustering for retrieval-time topic neighborhood discovery
+//      (loci sharing k breadcrumb levels share k lattice coords by
+//      construction — that's a MECHANICAL property, not a statistical claim)
+//   2. Deterministic per-locus identity (acts as a fingerprint)
+//
+// NOT recommended:
+//   - Treat as a learned semantic embedding the LM will exploit. It won't —
+//     not at our scale, not in our v0.1 reference triple-attention
+//     implementation. See docs/empirical-findings-2026-05-12.md for the
+//     full ablation.
 
 import { createHash } from "node:crypto";
 import type { Breadcrumb, LatticeCoord } from "../types.js";
