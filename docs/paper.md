@@ -534,14 +534,42 @@ should now answer.
 
 ## 12 — Roadmap
 
-- **v0.2**: learned breadcrumb-to-coordinate mapping (optional, falls back
-  to hash). Adaptive lattice radius. Multilingual crystallizer.
-- **v0.3**: incremental indexing (add documents to an existing `.ltmi`
-  without re-running the full pipeline).
-- **v0.4**: hosted reference service with rate-limited free tier.
-- **v0.5**: integration with the SOPHIA XT Cassandra T1 inference path —
-  loci as conditioning tokens for masked-diffusion generation.
-- **v1.0**: published evaluation results across at least three corpora,
+> **Updated 2026-05-12 (v0.3.1 amendment):** the original v0.5 line —
+> "loci as conditioning tokens for masked-diffusion generation" — has
+> been revised in light of the empirical findings documented in
+> [`empirical-findings-2026-05-12.md`](./empirical-findings-2026-05-12.md).
+> Three-way ablation (BLAKE2b / PCA-3D / uniform-random per-locus) showed
+> the lattice channel as wired in v0.1 is empirically content-free at
+> our scale. The v0.4 conditioning direction has been redesigned around
+> attention-bias formulation (ALiBi-style, Press et al. 2022) rather than
+> additive-K embedding — see the V1-V6 pre-registered remediation
+> experiment running concurrently.
+
+- **v0.2 (shipped):** learned breadcrumb-to-coordinate mapping (optional,
+  falls back to hash). Adaptive lattice radius. Multilingual crystallizer.
+- **v0.3 (shipped):** incremental indexing (add documents to an existing
+  `.ltmi` without re-running the full pipeline). PCA-3D alternative coord
+  scheme documented (with the empirical caveat that it does not improve
+  downstream perplexity over BLAKE2b in our reference T2 setup).
+- **v0.3.1 (this amendment, 2026-05-12):** formally reframes `lattice` as
+  a per-locus deterministic identifier rather than a semantic conditioning
+  signal. The file format itself is unchanged.
+- **v0.4 (in progress):** redesign of conditioning interface for masked-
+  diffusion consumers. Two paths under test:
+    - **D1 — attention bias:** lattice coords enter attention scores
+      as additive bias (ALiBi-style, arXiv:2108.12409). Gradient flows
+      through the bias, not through an additive embedding the gate can
+      close.
+    - **V1-V6 LoRA remediation:** six pre-registered interventions on
+      the v0.1 reference triple-attention implementation. If any of V2
+      (learned MLP), V3 (multi-resolution), V4 (gate temp annealing), or
+      V5 (aux contrastive loss) passes the pre-registered rule (≥2 of 4
+      metrics CI-sig improvement, consistent across 3 seeds), the v0.1
+      design is salvageable. If all six fail, v0.4 formally retires the
+      `attention_use_ltmi_priors` interface and adopts D1 as default.
+- **v0.5:** hosted reference service with rate-limited free tier (moved
+  from prior v0.4 slot once the v0.4 conditioning question resolves).
+- **v1.0:** published evaluation results across at least three corpora,
   including operational service-business documentation.
 
 ---
