@@ -37,7 +37,15 @@ export {
   deriveSourceId,
   deriveCorpusId,
 } from "./format/ltmi.js";
-export { latticeCoord, chebyshev, breadcrumbPrefixMatch, LATTICE } from "./format/lattice.js";
+export {
+  latticeCoord,
+  chebyshev,
+  breadcrumbPrefixMatch,
+  latticeRandomPerLocus,
+  multiResolutionCoord,
+  LATTICE,
+} from "./format/lattice.js";
+export type { MultiResCoord } from "./format/lattice.js";
 export { canonicalJson } from "./format/canonical-json.js";
 
 // Pipeline stages

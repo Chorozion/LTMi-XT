@@ -82,3 +82,73 @@ export function breadcrumbPrefixMatch(a: Breadcrumb, b: Breadcrumb): number {
 }
 
 export const LATTICE = { DIM: LATTICE_DIM } as const;
+
+
+// ─────────────────────────────────────────────────────────────────────────
+// Alternative coord schemes (v0.3.1) — ablation parity with Python `lensx.ltmi`
+// ─────────────────────────────────────────────────────────────────────────
+
+/**
+ * Uniform-random per-locus 3D coord, deterministic by (locusId, seed).
+ *
+ * This is the negative-control coord scheme from the 2026-05-12 three-way
+ * ablation. Empirically indistinguishable from BLAKE2b on Cassandra T2
+ * downstream metrics — included here for ablation studies and as an
+ * honest reference for what the lattice channel does NOT carry.
+ *
+ * @param locusId  any string uniquely identifying the locus
+ * @param dim      lattice dimension (default 64)
+ * @param seed     global seed combined with locusId for determinism
+ */
+export function latticeRandomPerLocus(
+  locusId: string,
+  dim: number = LATTICE_DIM,
+  seed: number = 0xC0FFEE,
+): LatticeCoord {
+  const key = `${seed.toString(16)}/${locusId}`;
+  const h = createHash("sha256").update(key, "utf8").digest("hex");
+  // Three independent 4-byte chunks
+  const x = parseInt(h.slice(0, 8), 16) % dim;
+  const y = parseInt(h.slice(8, 16), 16) % dim;
+  const z = parseInt(h.slice(16, 24), 16) % dim;
+  return [x, y, z] as const;
+}
+
+
+export interface MultiResCoord {
+  coarse: LatticeCoord;
+  medium: LatticeCoord;
+  fine: LatticeCoord;
+}
+
+/**
+ * Decompose a fine-grained 3D coord into coarse/medium/fine levels.
+ *
+ * Multi-resolution decomposition matching the V3 intervention's embedding
+ * scheme: coarse 4³, medium 16³, fine 64³ (assuming fineDim=64). Useful
+ * for visualization (zooming hierarchies) and for any consumer that wants
+ * to operate at multiple lattice scales.
+ *
+ * @param coord     a fine-grained (x, y, z), each in [0, fineDim)
+ * @param fineDim   the fine-level lattice dim (default 64)
+ */
+export function multiResolutionCoord(
+  coord: LatticeCoord,
+  fineDim: number = LATTICE_DIM,
+): MultiResCoord {
+  const coarseDiv = Math.max(1, Math.floor(fineDim / 4));   // 4³ resolution
+  const mediumDiv = Math.max(1, Math.floor(fineDim / 16));  // 16³ resolution
+  return {
+    coarse: [
+      Math.floor(coord[0] / coarseDiv),
+      Math.floor(coord[1] / coarseDiv),
+      Math.floor(coord[2] / coarseDiv),
+    ] as const,
+    medium: [
+      Math.floor(coord[0] / mediumDiv),
+      Math.floor(coord[1] / mediumDiv),
+      Math.floor(coord[2] / mediumDiv),
+    ] as const,
+    fine: coord,
+  };
+}

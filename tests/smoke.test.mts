@@ -15,6 +15,8 @@ import {
   deriveLocusId,
   deriveSourceId,
   latticeCoord,
+  latticeRandomPerLocus,
+  multiResolutionCoord,
   locusToRow,
   parseJsonl,
   serializeJsonl,
@@ -75,6 +77,29 @@ test("chebyshev distance is correct", () => {
   assert.equal(chebyshev([0, 0, 0], [0, 0, 0]), 0);
   assert.equal(chebyshev([0, 0, 0], [3, 1, 2]), 3);
   assert.equal(chebyshev([10, 20, 30], [13, 22, 31]), 3);
+});
+
+test("latticeRandomPerLocus is deterministic and changes with seed", () => {
+  // Same input → same output
+  const c1 = latticeRandomPerLocus("a-c5-001", 64, 0xC0FFEE);
+  const c2 = latticeRandomPerLocus("a-c5-001", 64, 0xC0FFEE);
+  assert.deepEqual(c1, c2);
+  // In-range
+  assert.ok(c1.every((v) => v >= 0 && v < 64));
+  // Different seed → different coord (with overwhelming probability)
+  const c3 = latticeRandomPerLocus("a-c5-001", 64, 42);
+  assert.notDeepEqual(c1, c3);
+  // Different locus → different coord
+  const c4 = latticeRandomPerLocus("a-c5-002", 64, 0xC0FFEE);
+  assert.notDeepEqual(c1, c4);
+});
+
+test("multiResolutionCoord decomposition is mechanically correct", () => {
+  // Fine 64³ default: coarse 4³ (div=16), medium 16³ (div=4)
+  const d = multiResolutionCoord([48, 16, 0], 64);
+  assert.deepEqual(d.fine, [48, 16, 0]);
+  assert.deepEqual(d.coarse, [3, 1, 0]);  // 48//16=3, 16//16=1, 0//16=0
+  assert.deepEqual(d.medium, [12, 4, 0]); // 48//4=12, 16//4=4,  0//4=0
 });
 
 test("locus id is content-addressed and stable", () => {
